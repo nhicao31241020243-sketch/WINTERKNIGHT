@@ -1,0 +1,17 @@
+nhấn F2 để bật/tắt chế độ toàn màn hình
+nhấn F3 để hiện/ẩn FPS
+nhấn F4 để bật/tắt nhạc
+nhấn P hoặc ESC để tạm dừng trò chơi
+nhấn phím A và D hoặc phím mũi tên trái/phải để di chuyển
+nhấn Z, J hoặc SPACEBAR để nhảy
+nhấn X, K, chuột phải hoặc chuột trái để tấn công
+thu thập kiếm để tăng sức tấn công
+thu thập vật phẩm đỏ để tăng máu tối đa
+nhấn Enter để lưu trò chơi
+đã lưu trò chơi
+hồi phục sinh lực
+xoá bỏ hiệu ứng tiêu cực
+đã học nhảy đôi
+nhấn nút nhảy 2 lần
+cảm ơn vì đã chơi!
+trò chơi sẽ sớm có thêm nhiều màn mới
