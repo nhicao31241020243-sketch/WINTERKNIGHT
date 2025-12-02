@@ -70,8 +70,8 @@ public class Player {
     private final GameSpriteAnimation spriteDeath;
 
     public Player() {
-        this.rect = new GameRectEntity(0, 0, 20, 20);  // CHỈNH: nhỏ hơn cho mèo
-        this.rectAttack = new GameRect(0, 0, 25, 10);  // CHỈNH: vùng tấn công nhỏ hơn
+        this.rect = new GameRectEntity(0, 0, 16, 16);  // GIẢM: nhỏ hơn cho mèo (từ 20,20)
+        this.rectAttack = new GameRect(0, 0, 20, 8);   // GIẢM: vùng tấn công nhỏ hơn (từ 25,10)
 
         this.hpMax = 9;
         this.hp = this.hpMax;
@@ -102,13 +102,13 @@ public class Player {
 
         this.isDirRight = true;
 
-        GameRect spriteRect = new GameRect(0, 0, 32, 32);  // CHỈNH: kích thước frame mèo
+        GameRect spriteRect = new GameRect(0, 0, 32, 32);  // Kích thước frame mèo
 
-        // CHỈNH: chỉ tạo sprite idle cho mèo
+        // Tạo sprite idle cho mèo
         this.spriteIdleRight = GameManagerSpritePlayer.createSpriteCatIdleRight(spriteRect);
         this.spriteIdleLeft = GameManagerSpritePlayer.createSpriteCatIdleLeft(spriteRect);
 
-        // CHỈNH: dùng sprite idle cho tất cả animation khác
+        // Dùng sprite idle cho tất cả animation khác
         this.spriteJumpRight = this.spriteIdleRight;
         this.spriteJumpLeft = this.spriteIdleLeft;
         this.spriteRunRight = this.spriteIdleRight;
@@ -116,7 +116,7 @@ public class Player {
         this.spriteAttackRight = this.spriteIdleRight;
         this.spriteAttackLeft = this.spriteIdleLeft;
 
-        this.spriteDeath = this.spriteIdleRight;  // CHỈNH: dùng sprite idle cho death
+        this.spriteDeath = this.spriteIdleRight;  // Dùng sprite idle cho death
         this.spriteDeath.reset();
 
         this.setCurrentSprite(this.spriteIdleRight);
@@ -375,11 +375,11 @@ public class Player {
     }
 
     private void setSpritePosition() {
-        // CHỈNH: offset cho sprite mèo 32x32
+        // ĐIỀU CHỈNH OFFSET CHO MÈO 32x32
         if (this.isDirRight) {
-            this.currentSprite.setPosition(this.rect.getRect().getX() - 6, this.rect.getRect().getY() - 6);
+            this.currentSprite.setPosition(this.rect.getRect().getX() - 8, this.rect.getRect().getY() - 8);
         } else {
-            this.currentSprite.setPosition(this.rect.getRect().getX() - 6, this.rect.getRect().getY() - 6);
+            this.currentSprite.setPosition(this.rect.getRect().getX() - 8, this.rect.getRect().getY() - 8);
         }
     }
 
@@ -435,20 +435,21 @@ public class Player {
 
         this.toMove();
 
-        // CHỈNH: mèo chỉ có idle animation, luôn dùng sprite idle
+        // Mèo chỉ có idle animation, luôn dùng sprite idle
         if (this.isDirRight) {
             this.setCurrentSprite(this.spriteIdleRight);
         } else {
             this.setCurrentSprite(this.spriteIdleLeft);
         }
 
+        // ĐIỀU CHỈNH VÙNG TẤN CÔNG CHO MÈO
         if (this.isDirRight) {
-            this.rectAttack.setX((int) this.rect.getX() + 20);
+            this.rectAttack.setX((int) this.rect.getX() + 16);  // GIẢM từ 20
         } else {
-            this.rectAttack.setX((int) this.rect.getX() - 31);
+            this.rectAttack.setX((int) this.rect.getX() - 20);  // GIẢM từ 31
         }
 
-        this.rectAttack.setY((int) this.rect.getY() + 11);
+        this.rectAttack.setY((int) this.rect.getY() + 8);  // GIẢM từ 11
 
         this.setSpritePosition();
 
