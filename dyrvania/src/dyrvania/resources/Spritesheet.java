@@ -45,7 +45,7 @@ public class Spritesheet {
 			auxSpritesheetSkull = ImageIO.read(Spritesheet.class.getResource("/sprites/skull.png"));
 			auxSpritesheetSkeleton = ImageIO.read(Spritesheet.class.getResource("/sprites/skeleton.png"));
 			auxSpritesheetBoss = ImageIO.read(Spritesheet.class.getResource("/sprites/boss.png"));
-			auxSpritesheetBackground = ImageIO.read(Spritesheet.class.getResource("/sprites/background.png"));
+			auxSpritesheetBackground = ImageIO.read(Spritesheet.class.getResource("/sprites/backgroundOLD.png"));
 		} catch (Exception e) {
 			Main.exitWithError(StringError.ERROR_LOADING_SPRITES.getValue());
 		}
