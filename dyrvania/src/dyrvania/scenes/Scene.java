@@ -19,7 +19,7 @@ import dyrvania.scenes.backgrounds.Background;
 import dyrvania.scenes.backgrounds.BackgroundCastle;
 import dyrvania.scenes.entities.Player;
 import dyrvania.scenes.entities.enemies.Enemy;
-import dyrvania.scenes.entities.enemies.Skeleton;
+import dyrvania.scenes.entities.enemies.Golem;
 import dyrvania.scenes.entities.enemies.Skull;
 import dyrvania.scenes.entities.enemies.Thing;
 import dyrvania.scenes.entities.enemies.bosses.Boss;
@@ -206,7 +206,7 @@ public abstract class Scene {
                         this.floors.add(new Floor(x * this.sizeBaseTiles, y * this.sizeBaseTiles, this.sizeBaseTiles, this.sizeBaseTiles));
                         break;
                     case 0xFFFF6400:
-                        this.enemies.add(new Skeleton(this, x * this.sizeBaseTiles, y * this.sizeBaseTiles - 8));
+                        this.enemies.add(new Golem(this, x * this.sizeBaseTiles, y * this.sizeBaseTiles - 8));
                         break;
                     case 0xFFFFFF00:
                         this.enemies.add(new Skull(this, x * this.sizeBaseTiles, y * this.sizeBaseTiles));
