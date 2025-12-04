@@ -15,109 +15,176 @@ import dyrvania.gui.GameText;
 import dyrvania.resources.GameFont;
 import dyrvania.resources.Spritesheet;
 
+// THÊM IMPORT
+import dyrvania.scenes.backgrounds.BackgroundSpriteManager;
+
 public abstract class Screen {
 
-	protected final Game game;
+    protected final Game game;
 
-	private static final BufferedImage background;
+    private static BufferedImage background;
+    private static boolean backgroundLoaded = false;
 
-	private final GameText title;
+    private final GameText title;
 
-	protected final List<GameText> texts;
-	protected final List<GameButton> buttons;
+    protected final List<GameText> texts;
+    protected final List<GameButton> buttons;
 
-	private boolean mousePressed;
-	private boolean mouseReleased;
+    private boolean mousePressed;
+    private boolean mouseReleased;
 
-	private int mouseX;
-	private int mouseY;
+    private int mouseX;
+    private int mouseY;
 
-	static {
-		background = Spritesheet.getSpriteBackground(12, 332, 512, 224);
-	}
+    // KHỞI TẠO BACKGROUND VỚI BG_04
+    private static void initializeBackground() {
+        if (!backgroundLoaded) {
+            try {
+                System.out.println("🎮 Initializing menu background (BG_04)...");
 
-	public Screen(Game game, String title) {
-		this.game = game;
+                // LẤY BG_04 TỪ SPRITEMAP
+                BackgroundSpriteManager manager = BackgroundSpriteManager.getInstance();
+                BufferedImage bg04 = manager.getSprite("BG_04");
 
-		Graphics render = game.getRender();
+                if (bg04 != null && bg04.getWidth() > 100 && bg04.getHeight() > 100) {
+                    background = bg04;
+                    System.out.println("✅ Menu background: BG_04 (" +
+                            bg04.getWidth() + "x" + bg04.getHeight() + ")");
+                } else {
+                    // NẾU BG_04 KHÔNG CÓ, THỬ BG_01
+                    System.out.println("⚠️ BG_04 not available, trying BG_01...");
+                    BufferedImage bg01 = manager.getSprite("BG_01");
 
-		render.setFont(GameFont.getTitle());
+                    if (bg01 != null && bg01.getWidth() > 100) {
+                        background = bg01;
+                        System.out.println("✅ Menu background: BG_01 (fallback)");
+                    } else {
+                        // FALLBACK VỀ BACKGROUND CŨ
+                        background = Spritesheet.getSpriteBackground(12, 332, 512, 224);
+                        System.out.println("⚠️ Using default menu background");
+                    }
+                }
+            } catch (Exception e) {
+                System.err.println("❌ Error loading menu background: " + e.getMessage());
+                background = Spritesheet.getSpriteBackground(12, 332, 512, 224);
+            }
 
-		int titleWidth = render.getFontMetrics().stringWidth(title);
+            backgroundLoaded = true;
+        }
+    }
 
-		this.title = new GameText(title, (game.getGameWidth() - titleWidth) / 2, 80, GameColors.WHITE, GameFont.getTitle());
+    public Screen(Game game, String title) {
+        // KHỞI TẠO BACKGROUND
+        initializeBackground();
 
-		this.texts = new ArrayList<>();
-		this.buttons = new ArrayList<>();
+        this.game = game;
 
-		this.mousePressed = false;
-		this.mouseReleased = false;
+        Graphics render = game.getRender();
 
-		this.mouseX = 0;
-		this.mouseY = 0;
+        render.setFont(GameFont.getTitle());
 
-		this.texts.add(new GameText(String.format("v %s", this.game.getVersion()), 25, 25, GameColors.WHITE, GameFont.getSmall()));
-	}
+        int titleWidth = render.getFontMetrics().stringWidth(title);
 
-	public abstract GameStatus getGameStatus();
+        this.title = new GameText(title, (game.getGameWidth() - titleWidth) / 2, 80, GameColors.WHITE, GameFont.getTitle());
 
-	public void tick() {
-		if (this.mousePressed) {
-			for (GameButton button : this.buttons) {
-				if (button.wasClicked(this.mouseX, this.mouseY)) {
-					button.setButtonPressed();
-				}
-			}
+        this.texts = new ArrayList<>();
+        this.buttons = new ArrayList<>();
 
-			this.mousePressed = false;
-		}
+        this.mousePressed = false;
+        this.mouseReleased = false;
 
-		if (this.mouseReleased) {
-			for (GameButton button : this.buttons) {
-				if (button.wasClicked(this.mouseX, this.mouseY)) {
-					button.onClick();
-				}
+        this.mouseX = 0;
+        this.mouseY = 0;
 
-				button.setButtonReleased();
-			}
+        this.texts.add(new GameText(String.format("v %s", this.game.getVersion()), 25, 25, GameColors.WHITE, GameFont.getSmall()));
+    }
 
-			this.mouseReleased = false;
-		}
-	}
+    public abstract GameStatus getGameStatus();
 
-	public void render(Graphics render) {
-		render.drawImage(Screen.background, 0, 0, this.game.getGameWidth(), this.game.getGameHeight(), null);
+    public void tick() {
+        if (this.mousePressed) {
+            for (GameButton button : this.buttons) {
+                if (button.wasClicked(this.mouseX, this.mouseY)) {
+                    button.setButtonPressed();
+                }
+            }
 
-		render.setColor(new Color(0, 0, 0, 0.5f));
-		render.fillRect(0, 0, this.game.getGameWidth(), this.game.getGameHeight());
+            this.mousePressed = false;
+        }
 
-		this.title.render(render);
+        if (this.mouseReleased) {
+            for (GameButton button : this.buttons) {
+                if (button.wasClicked(this.mouseX, this.mouseY)) {
+                    button.onClick();
+                }
 
-		for (GameText text : this.texts) {
-			text.render(render);
-		}
+                button.setButtonReleased();
+            }
 
-		for (GameButton button : this.buttons) {
-			button.render(render);
-		}
-	}
+            this.mouseReleased = false;
+        }
+    }
 
-	public void mousePressed(MouseEvent e) {
-		if (e.getButton() == MouseEvent.BUTTON1) {
-			this.mousePressed = true;
+    public void render(Graphics render) {
+        // ĐẢM BẢO BACKGROUND ĐÃ LOAD
+        if (background == null) {
+            initializeBackground();
+        }
 
-			this.mouseX = e.getX();
-			this.mouseY = e.getY();
-		}
-	}
+        // VẼ BACKGROUND (BG_04 hoặc fallback)
+        render.drawImage(background, 0, 0, this.game.getGameWidth(), this.game.getGameHeight(), null);
 
-	public void mouseReleased(MouseEvent e) {
-		if (e.getButton() == MouseEvent.BUTTON1) {
-			this.mouseReleased = true;
+        // LỚP PHỦ ĐEN TRONG SUỐT (giữ nguyên)
+        render.setColor(new Color(0, 0, 0, 0.5f));
+        render.fillRect(0, 0, this.game.getGameWidth(), this.game.getGameHeight());
 
-			this.mouseX = e.getX();
-			this.mouseY = e.getY();
-		}
-	}
+        // VẼ CÁC THÀNH PHẦN KHÁC
+        this.title.render(render);
+
+        for (GameText text : this.texts) {
+            text.render(render);
+        }
+
+        for (GameButton button : this.buttons) {
+            button.render(render);
+        }
+    }
+
+    // METHOD ĐỂ THAY ĐỔI BACKGROUND (TUỲ CHỌN)
+    public static void setMenuBackground(BufferedImage newBackground) {
+        background = newBackground;
+        System.out.println("🔄 Menu background changed");
+    }
+
+    // METHOD ĐỂ RESET VỀ BG_04 (TUỲ CHỌN)
+    public static void resetToBG04() {
+        try {
+            BufferedImage bg04 = BackgroundSpriteManager.getInstance().getSprite("BG_04");
+            if (bg04 != null) {
+                background = bg04;
+                System.out.println("🔄 Menu background reset to BG_04");
+            }
+        } catch (Exception e) {
+            System.err.println("❌ Cannot reset to BG_04");
+        }
+    }
+
+    public void mousePressed(MouseEvent e) {
+        if (e.getButton() == MouseEvent.BUTTON1) {
+            this.mousePressed = true;
+
+            this.mouseX = e.getX();
+            this.mouseY = e.getY();
+        }
+    }
+
+    public void mouseReleased(MouseEvent e) {
+        if (e.getButton() == MouseEvent.BUTTON1) {
+            this.mouseReleased = true;
+
+            this.mouseX = e.getX();
+            this.mouseY = e.getY();
+        }
+    }
 
 }
