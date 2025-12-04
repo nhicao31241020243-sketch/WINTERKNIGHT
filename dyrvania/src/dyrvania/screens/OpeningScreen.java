@@ -12,53 +12,53 @@ import dyrvania.strings.StringGame;
 
 public class OpeningScreen {
 
-	private final Game game;
+    private final Game game;
 
-	private float alpha;
-	private boolean sum;
+    private float alpha;
+    private boolean sum;
 
-	private final GameText title;
+    private final GameText title;
 
-	public OpeningScreen(Game game) {
-		this.game = game;
+    public OpeningScreen(Game game) {
+        this.game = game;
 
-		this.alpha = 1.0f;
-		this.sum = false;
+        this.alpha = 1.0f;
+        this.sum = false;
 
-		Graphics render = game.getRender();
+        Graphics render = game.getRender();
 
-		render.setFont(GameFont.getTitleLarge());
+        render.setFont(GameFont.getTitleLarge());
 
-		int textWidth = render.getFontMetrics().stringWidth(StringGame.TITLE.getValue());
-		int textHeight = render.getFontMetrics().getHeight();
+        int textWidth = render.getFontMetrics().stringWidth(StringGame.TITLE.getValue());
+        int textHeight = render.getFontMetrics().getHeight();
 
-		int textX = (game.getGameWidth() - textWidth) / 2;
-		int textY = (game.getGameHeight() - textHeight) / 2 + render.getFontMetrics().getAscent();
+        int textX = (game.getGameWidth() - textWidth) / 2;
+        int textY = (game.getGameHeight() - textHeight) / 2 + render.getFontMetrics().getAscent();
 
-		this.title = new GameText(StringGame.TITLE.getValue(), textX, textY, GameColors.WHITE, GameFont.getTitleLarge());
-	}
+        this.title = new GameText(StringGame.TITLE.getValue(), textX, textY, GameColors.WHITE, GameFont.getTitleLarge());
+    }
 
-	public void tick() {
-		if (this.sum) {
-			this.alpha += 0.01f;
-		} else {
-			this.alpha -= 0.01f;
-		}
+    public void tick() {
+        if (this.sum) {
+            this.alpha += 0.01f;
+        } else {
+            this.alpha -= 0.01f;
+        }
 
-		if (this.alpha <= 0.0f) {
-			this.alpha = 0.0f;
-			this.sum = true;
-		} else if (this.alpha >= 1.0f) {
-			this.alpha = 1.0f;
-			this.game.setGameStatus(GameStatus.SELECT_LANGUAGE);
-		}
-	}
+        if (this.alpha <= 0.0f) {
+            this.alpha = 0.0f;
+            this.sum = true;
+        } else if (this.alpha >= 1.0f) {
+            this.alpha = 1.0f;
+            this.game.setGameStatus(GameStatus.SELECT_LANGUAGE);
+        }
+    }
 
-	public void render(Graphics render) {
-		this.title.render(render);
+    public void render(Graphics render) {
+        this.title.render(render);
 
-		render.setColor(new Color(0.0f, 0.0f, 0.0f, this.alpha));
-		render.fillRect(0, 0, this.game.getGameWidth(), this.game.getHeight());
-	}
+        render.setColor(new Color(0.0f, 0.0f, 0.0f, this.alpha));
+        render.fillRect(0, 0, this.game.getGameWidth(), this.game.getHeight());
+    }
 
 }
