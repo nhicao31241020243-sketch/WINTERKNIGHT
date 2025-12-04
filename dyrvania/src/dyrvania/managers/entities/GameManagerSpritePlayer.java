@@ -1,6 +1,11 @@
 package dyrvania.managers.entities;
 
+import java.awt.Graphics2D;
+import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
+import java.io.InputStream;
+
+import javax.imageio.ImageIO;
 
 import dyrvania.generics.GameColors;
 import dyrvania.generics.GameRect;
@@ -10,139 +15,131 @@ import dyrvania.resources.Spritesheet;
 
 public class GameManagerSpritePlayer {
 
-	// Sprites Normal
-	private final static BufferedImage[] spriteIdleRight;
-	private final static BufferedImage[] spriteIdleLeft;
+    // ... (các sprite array hiện tại vẫn giữ) ...
 
-	private final static BufferedImage[] spriteJumpRight;
-	private final static BufferedImage[] spriteJumpLeft;
+    // THÊM SPRITE CHO MÈO
+    private final static BufferedImage[] spriteCatIdleRight;
+    private final static BufferedImage[] spriteCatIdleLeft;
+    private final static BufferedImage[] spriteCatIdleRightPoisoned;
+    private final static BufferedImage[] spriteCatIdleLeftPoisoned;
 
-	private final static BufferedImage[] spriteRunRight;
-	private final static BufferedImage[] spriteRunLeft;
+    static {
+        // ... (phần static block hiện tại) ...
 
-	private final static BufferedImage[] spriteAttackRight;
-	private final static BufferedImage[] spriteAttackLeft;
+        // === THÊM PHẦN MÈO - LOAD TỪ FILE ===
+        int catWidth = 32;
+        int catHeight = 32;
 
-	// Sprites Poisoned
-	private final static BufferedImage[] spriteIdleRightPoisoned;
-	private final static BufferedImage[] spriteIdleLeftPoisoned;
+        // Cat Idle Right
+        spriteCatIdleRight = new BufferedImage[10];
+        spriteCatIdleRightPoisoned = new BufferedImage[10];
 
-	private final static BufferedImage[] spriteJumpRightPoisoned;
-	private final static BufferedImage[] spriteJumpLeftPoisoned;
+        // Cat Idle Left
+        spriteCatIdleLeft = new BufferedImage[10];
+        spriteCatIdleLeftPoisoned = new BufferedImage[10];
 
-	private final static BufferedImage[] spriteRunRightPoisoned;
-	private final static BufferedImage[] spriteRunLeftPoisoned;
+        try {
+            // Load file cat.png từ resources
+            InputStream is = GameManagerSpritePlayer.class.getResourceAsStream("/sprites/cat.png");
 
-	private final static BufferedImage[] spriteAttackRightPoisoned;
-	private final static BufferedImage[] spriteAttackLeftPoisoned;
+            if (is != null) {
+                BufferedImage catSpriteSheet = ImageIO.read(is);
 
-	static {
-		int spriteWidth = 100;
-		int spriteHeight = 59;
+                // Cắt 10 frame cho spriteCatIdleRight
+                for (int i = 0; i < 10; i++) {
+                    spriteCatIdleRight[i] = catSpriteSheet.getSubimage(i * catWidth, 0, catWidth, catHeight);
+                    spriteCatIdleRightPoisoned[i] = GameUtil.createSpriteColor(spriteCatIdleRight[i], GameColors.POISONED);
 
-		// Idle Right
-		spriteIdleRight = new BufferedImage[4];
-		spriteIdleRightPoisoned = new BufferedImage[4];
+                    // Tạo left bằng cách flip ngang
+                    spriteCatIdleLeft[i] = flipImageHorizontally(spriteCatIdleRight[i]);
+                    spriteCatIdleLeftPoisoned[i] = GameUtil.createSpriteColor(spriteCatIdleLeft[i], GameColors.POISONED);
+                }
+            } else {
+                // Nếu không tìm thấy file, tạo placeholder
+                createCatPlaceholderSprites();
+            }
 
-		for (int i = 0; i < spriteIdleRight.length; i++) {
-			spriteIdleRight[i] = Spritesheet.getSpritePlayer(spriteWidth * i, 0, spriteWidth, spriteHeight);
-			spriteIdleRightPoisoned[i] = GameUtil.createSpriteColor(spriteIdleRight[i], GameColors.POISONED);
-		}
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Nếu lỗi, tạo placeholder
+            createCatPlaceholderSprites();
+        }
+    }
 
-		// Idle Left
-		spriteIdleLeft = new BufferedImage[4];
-		spriteIdleLeftPoisoned = new BufferedImage[4];
+    // Method tạo placeholder nếu không load được ảnh
+    private static void createCatPlaceholderSprites() {
+        int catWidth = 32;
+        int catHeight = 32;
 
-		for (int i = 0; i < spriteIdleLeft.length; i++) {
-			spriteIdleLeft[i] = Spritesheet.getSpritePlayer(spriteWidth * i, 59, spriteWidth, spriteHeight);
-			spriteIdleLeftPoisoned[i] = GameUtil.createSpriteColor(spriteIdleLeft[i], GameColors.POISONED);
-		}
+        for (int i = 0; i < 10; i++) {
+            // Tạo frame màu đơn giản
+            BufferedImage frame = new BufferedImage(catWidth, catHeight, BufferedImage.TYPE_INT_ARGB);
+            Graphics2D g = frame.createGraphics();
 
-		// Jump Right
-		spriteJumpRight = new BufferedImage[2];
-		spriteJumpRightPoisoned = new BufferedImage[2];
+            // Mèo màu cam
+            g.setColor(new java.awt.Color(255, 165, 0)); // Cam
+            g.fillRect(0, 0, catWidth, catHeight);
 
-		for (int i = 0; i < spriteJumpRight.length; i++) {
-			spriteJumpRight[i] = Spritesheet.getSpritePlayer(spriteWidth * i + 400, 0, spriteWidth, spriteHeight);
-			spriteJumpRightPoisoned[i] = GameUtil.createSpriteColor(spriteJumpRight[i], GameColors.POISONED);
-		}
+            // Vẽ tai mèo
+            g.setColor(java.awt.Color.BLACK);
+            g.fillPolygon(new int[]{5, 10, 15}, new int[]{5, 0, 5}, 3); // Tai trái
+            g.fillPolygon(new int[]{17, 22, 27}, new int[]{5, 0, 5}, 3); // Tai phải
 
-		// Jump Left
-		spriteJumpLeft = new BufferedImage[2];
-		spriteJumpLeftPoisoned = new BufferedImage[2];
+            // Vẽ mắt mèo
+            g.setColor(java.awt.Color.GREEN);
+            g.fillOval(8, 10, 6, 8);  // Mắt trái
+            g.fillOval(18, 10, 6, 8); // Mắt phải
 
-		for (int i = 0; i < spriteJumpLeft.length; i++) {
-			spriteJumpLeft[i] = Spritesheet.getSpritePlayer(spriteWidth * i + 400, 59, spriteWidth, spriteHeight);
-			spriteJumpLeftPoisoned[i] = GameUtil.createSpriteColor(spriteJumpLeft[i], GameColors.POISONED);
-		}
+            // Vẽ mũi
+            g.setColor(java.awt.Color.PINK);
+            g.fillOval(14, 18, 4, 3);
 
-		// Run Right
-		spriteRunRight = new BufferedImage[6];
-		spriteRunRightPoisoned = new BufferedImage[6];
+            // Vẽ râu
+            g.setColor(java.awt.Color.WHITE);
+            g.drawLine(8, 15, 2, 13);  // Râu trái 1
+            g.drawLine(8, 17, 2, 17);  // Râu trái 2
+            g.drawLine(8, 19, 2, 21);  // Râu trái 3
+            g.drawLine(24, 15, 30, 13); // Râu phải 1
+            g.drawLine(24, 17, 30, 17); // Râu phải 2
+            g.drawLine(24, 19, 30, 21); // Râu phải 3
 
-		for (int i = 0; i < spriteRunRight.length; i++) {
-			spriteRunRight[i] = Spritesheet.getSpritePlayer(spriteWidth * i, 118, spriteWidth, spriteHeight);
-			spriteRunRightPoisoned[i] = GameUtil.createSpriteColor(spriteRunRight[i], GameColors.POISONED);
-		}
+            g.dispose();
 
-		// Run Left
-		spriteRunLeft = new BufferedImage[6];
-		spriteRunLeftPoisoned = new BufferedImage[6];
+            spriteCatIdleRight[i] = frame;
+            spriteCatIdleRightPoisoned[i] = GameUtil.createSpriteColor(frame, GameColors.POISONED);
 
-		for (int i = 0; i < spriteRunLeft.length; i++) {
-			spriteRunLeft[i] = Spritesheet.getSpritePlayer(spriteWidth * i, 177, spriteWidth, spriteHeight);
-			spriteRunLeftPoisoned[i] = GameUtil.createSpriteColor(spriteRunLeft[i], GameColors.POISONED);
-		}
+            // Tạo left bằng cách flip
+            spriteCatIdleLeft[i] = flipImageHorizontally(frame);
+            spriteCatIdleLeftPoisoned[i] = GameUtil.createSpriteColor(spriteCatIdleLeft[i], GameColors.POISONED);
+        }
+    }
 
-		// Attack Right
-		spriteAttackRight = new BufferedImage[5];
-		spriteAttackRightPoisoned = new BufferedImage[5];
+    // Method flip ảnh ngang (giữ nguyên)
+    private static BufferedImage flipImageHorizontally(BufferedImage image) {
+        AffineTransform tx = AffineTransform.getScaleInstance(-1, 1);
+        tx.translate(-image.getWidth(), 0);
 
-		for (int i = 0; i < spriteAttackRight.length; i++) {
-			spriteAttackRight[i] = Spritesheet.getSpritePlayer(spriteWidth * i, 236, spriteWidth, spriteHeight);
-			spriteAttackRightPoisoned[i] = GameUtil.createSpriteColor(spriteAttackRight[i], GameColors.POISONED);
-		}
+        BufferedImage flipped = new BufferedImage(
+                image.getWidth(),
+                image.getHeight(),
+                BufferedImage.TYPE_INT_ARGB
+        );
 
-		// Attack Left
-		spriteAttackLeft = new BufferedImage[5];
-		spriteAttackLeftPoisoned = new BufferedImage[5];
+        Graphics2D g = flipped.createGraphics();
+        g.drawImage(image, tx, null);
+        g.dispose();
 
-		for (int i = 0; i < spriteAttackLeft.length; i++) {
-			spriteAttackLeft[i] = Spritesheet.getSpritePlayer(spriteWidth * i, 295, spriteWidth, spriteHeight);
-			spriteAttackLeftPoisoned[i] = GameUtil.createSpriteColor(spriteAttackLeft[i], GameColors.POISONED);
-		}
-	}
+        return flipped;
+    }
 
-	public static GameSpriteAnimation createSpriteIdleRight(GameRect rect) {
-		return new GameSpriteAnimation(rect, 15, GameManagerSpritePlayer.spriteIdleRight, GameManagerSpritePlayer.spriteIdleRightPoisoned);
-	}
+    // ... (các method createSprite hiện tại) ...
 
-	public static GameSpriteAnimation createSpriteIdleLeft(GameRect rect) {
-		return new GameSpriteAnimation(rect, 15, GameManagerSpritePlayer.spriteIdleLeft, GameManagerSpritePlayer.spriteIdleLeftPoisoned);
-	}
+    // THÊM METHOD CHO MÈO
+    public static GameSpriteAnimation createSpriteCatIdleRight(GameRect rect) {
+        return new GameSpriteAnimation(rect, 15, GameManagerSpritePlayer.spriteCatIdleRight, GameManagerSpritePlayer.spriteCatIdleRightPoisoned);
+    }
 
-	public static GameSpriteAnimation createSpriteJumpRight(GameRect rect) {
-		return new GameSpriteAnimation(rect, 15, GameManagerSpritePlayer.spriteJumpRight, GameManagerSpritePlayer.spriteJumpRightPoisoned);
-	}
-
-	public static GameSpriteAnimation createSpriteJumpLeft(GameRect rect) {
-		return new GameSpriteAnimation(rect, 15, GameManagerSpritePlayer.spriteJumpLeft, GameManagerSpritePlayer.spriteJumpLeftPoisoned);
-	}
-
-	public static GameSpriteAnimation createSpriteRunRight(GameRect rect) {
-		return new GameSpriteAnimation(rect, 10, GameManagerSpritePlayer.spriteRunRight, GameManagerSpritePlayer.spriteRunRightPoisoned);
-	}
-
-	public static GameSpriteAnimation createSpriteRunLeft(GameRect rect) {
-		return new GameSpriteAnimation(rect, 10, GameManagerSpritePlayer.spriteRunLeft, GameManagerSpritePlayer.spriteRunLeftPoisoned);
-	}
-
-	public static GameSpriteAnimation createSpriteAttackRight(GameRect rect) {
-		return new GameSpriteAnimation(rect, 5, GameManagerSpritePlayer.spriteAttackRight, GameManagerSpritePlayer.spriteAttackRightPoisoned);
-	}
-
-	public static GameSpriteAnimation createSpriteAttackLeft(GameRect rect) {
-		return new GameSpriteAnimation(rect, 5, GameManagerSpritePlayer.spriteAttackLeft, GameManagerSpritePlayer.spriteAttackLeftPoisoned);
-	}
-
+    public static GameSpriteAnimation createSpriteCatIdleLeft(GameRect rect) {
+        return new GameSpriteAnimation(rect, 15, GameManagerSpritePlayer.spriteCatIdleLeft, GameManagerSpritePlayer.spriteCatIdleLeftPoisoned);
+    }
 }
