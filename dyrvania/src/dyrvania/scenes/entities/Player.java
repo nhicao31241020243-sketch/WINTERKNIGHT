@@ -73,11 +73,11 @@ public class Player {
 
     // Kích thước cho KNIGHT
     private static final int HITBOX_WIDTH = 60;
-    private static final int HITBOX_HEIGHT = 80;
+    private static final int HITBOX_HEIGHT = 60;
     private static final int ATTACK_WIDTH = 70;
     private static final int ATTACK_HEIGHT = 50;
     private static final int SPRITE_OFFSET_X = -13;
-    private static final int SPRITE_OFFSET_Y = -3;
+    private static final int SPRITE_OFFSET_Y = -10;
 
     public Player() {
         this.rect = new GameRectEntity(0, 0, HITBOX_WIDTH, HITBOX_HEIGHT);
