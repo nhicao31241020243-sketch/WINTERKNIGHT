@@ -16,7 +16,7 @@ public class Translation {
 	private static String language = "english";
 
 	public enum Language {
-		ENGLISH, PORTUGUESE, SPANISH;
+		ENGLISH, VIETNAM, SPANISH;
 	}
 
 	public static String getLanguage() {
@@ -24,10 +24,8 @@ public class Translation {
 	}
 
 	public static void changeTheLanguage(Language language) {
-		if (language == Translation.Language.PORTUGUESE) {
-			Translation.language = "portuguese";
-		} else if (language == Translation.Language.SPANISH) {
-			Translation.language = "spanish";
+		if (language == Translation.Language.VIETNAM) {
+			Translation.language = "vietnam";
 		} else {
 			Translation.language = "english";
 		}

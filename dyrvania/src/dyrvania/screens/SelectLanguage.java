@@ -21,9 +21,7 @@ public class SelectLanguage extends Screen {
 		int centerX = (game.getGameWidth() - GameButton.getWidth()) / 2;
 
 		super.buttons.add(new GameButton(game, StringScreen.ENGLISH.getValue(), centerX, 120, () -> this.selectLanguage(Language.ENGLISH, game)));
-		super.buttons.add(new GameButton(game, StringScreen.PORTUGUESE.getValue(), centerX, 220, () -> this.selectLanguage(Language.PORTUGUESE, game)));
-		super.buttons.add(new GameButton(game, StringScreen.SPANISH.getValue(), centerX, 320, () -> this.selectLanguage(Language.SPANISH, game)));
-
+		super.buttons.add(new GameButton(game, StringScreen.VIETNAM.getValue(), centerX, 220, () -> this.selectLanguage(Language.VIETNAM, game)));
 		Graphics render = game.getRender();
 
 		render.setFont(GameFont.getSmall());
