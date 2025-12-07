@@ -21,15 +21,15 @@ public class GameManagerSpriteSkeleton {
 	private final static BufferedImage[] spriteRunLeftDamage;
 
 	static {
-		int spriteWidth = 44;
-		int spriteHeight = 52;
+		int spriteWidth = 90;
+		int spriteHeight = 64;
 
 		// Run Right
 		spriteRunRight = new BufferedImage[8];
 		spriteRunRightDamage = new BufferedImage[8];
 
 		for (int i = 0; i < spriteRunRight.length; i++) {
-			spriteRunRight[i] = Spritesheet.getSpriteSkeleton(spriteWidth * i, 156, spriteWidth, spriteHeight);
+			spriteRunRight[i] = Spritesheet.getSpriteSkeleton(spriteWidth * i, 192, spriteWidth, spriteHeight);
 			spriteRunRightDamage[i] = GameUtil.createSpriteColor(spriteRunRight[i], GameColors.DAMAGE);
 		}
 
@@ -38,7 +38,7 @@ public class GameManagerSpriteSkeleton {
 		spriteRunLeftDamage = new BufferedImage[8];
 
 		for (int i = 0; i < spriteRunLeft.length; i++) {
-			spriteRunLeft[i] = Spritesheet.getSpriteSkeleton(spriteWidth * i, 104, spriteWidth, spriteHeight);
+			spriteRunLeft[i] = Spritesheet.getSpriteSkeleton(spriteWidth * i, 128, spriteWidth, spriteHeight);
 			spriteRunLeftDamage[i] = GameUtil.createSpriteColor(spriteRunLeft[i], GameColors.DAMAGE);
 		}
 
@@ -46,7 +46,7 @@ public class GameManagerSpriteSkeleton {
 		spriteSpawnRight = new BufferedImage[6];
 
 		for (int i = 0; i < spriteSpawnRight.length; i++) {
-			spriteSpawnRight[i] = Spritesheet.getSpriteSkeleton(spriteWidth * i, 52, spriteWidth, spriteHeight);
+			spriteSpawnRight[i] = Spritesheet.getSpriteSkeleton(spriteWidth * i, 64, spriteWidth, spriteHeight);
 		}
 
 		// Spawn Left
@@ -58,19 +58,19 @@ public class GameManagerSpriteSkeleton {
 	}
 
 	public static GameSpriteAnimation createSpriteRunRight(GameRect rect) {
-		return new GameSpriteAnimation(rect, 5, GameManagerSpriteSkeleton.spriteRunRight, GameManagerSpriteSkeleton.spriteRunRightDamage);
+		return new GameSpriteAnimation(rect, 13, GameManagerSpriteSkeleton.spriteRunRight, GameManagerSpriteSkeleton.spriteRunRightDamage);
 	}
 
 	public static GameSpriteAnimation createSpriteRunLeft(GameRect rect) {
-		return new GameSpriteAnimation(rect, 5, GameManagerSpriteSkeleton.spriteRunLeft, GameManagerSpriteSkeleton.spriteRunLeftDamage);
+		return new GameSpriteAnimation(rect, 13, GameManagerSpriteSkeleton.spriteRunLeft, GameManagerSpriteSkeleton.spriteRunLeftDamage);
 	}
 
 	public static GameSpriteAnimation createSpriteSpawnRight(GameRect rect) {
-		return new GameSpriteAnimation(rect, 5, GameManagerSpriteSkeleton.spriteSpawnRight, GameManagerSpriteSkeleton.spriteSpawnRight);
+		return new GameSpriteAnimation(rect, 13, GameManagerSpriteSkeleton.spriteSpawnRight, GameManagerSpriteSkeleton.spriteSpawnRight);
 	}
 
 	public static GameSpriteAnimation createSpriteSpawnLeft(GameRect rect) {
-		return new GameSpriteAnimation(rect, 5, GameManagerSpriteSkeleton.spriteSpawnLeft, GameManagerSpriteSkeleton.spriteSpawnLeft);
+		return new GameSpriteAnimation(rect, 13, GameManagerSpriteSkeleton.spriteSpawnLeft, GameManagerSpriteSkeleton.spriteSpawnLeft);
 	}
 
 }

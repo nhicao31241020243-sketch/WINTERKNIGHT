@@ -39,13 +39,6 @@ public class Player {
 
     private boolean isAttacking;
     private boolean canDealDamage;
-    private int attackAnimationCounter;
-
-    private boolean isPushing;
-    private boolean isClimbing;
-    private boolean isThrowing;
-    private boolean isHurt;
-    private int hurtTimer;
 
     private float speedX;
     private float speedY;
@@ -62,26 +55,24 @@ public class Player {
 
     private boolean isDirRight;
     private GameSpriteAnimation currentSprite;
-    private GameSpriteAnimation dustSprite;
-    private boolean showDust;
 
-    // Animation map
-    private final Map<String, GameSpriteAnimation> animations;
-    private String currentAnimationKey;
-    private boolean wasJumping;
-    private boolean wasAttacking;
+    private final GameSpriteAnimation spriteIdleRight;
+    private final GameSpriteAnimation spriteIdleLeft;
 
-    // Kích thước cho KNIGHT
-    private static final int HITBOX_WIDTH = 60;
-    private static final int HITBOX_HEIGHT = 60;
-    private static final int ATTACK_WIDTH = 70;
-    private static final int ATTACK_HEIGHT = 50;
-    private static final int SPRITE_OFFSET_X = -13;
-    private static final int SPRITE_OFFSET_Y = -10;
+    private final GameSpriteAnimation spriteJumpRight;
+    private final GameSpriteAnimation spriteJumpLeft;
+
+    private final GameSpriteAnimation spriteRunRight;
+    private final GameSpriteAnimation spriteRunLeft;
+
+    private final GameSpriteAnimation spriteAttackRight;
+    private final GameSpriteAnimation spriteAttackLeft;
+
+    private final GameSpriteAnimation spriteDeath;
 
     public Player() {
-        this.rect = new GameRectEntity(0, 0, HITBOX_WIDTH, HITBOX_HEIGHT);
-        this.rectAttack = new GameRect(0, 0, ATTACK_WIDTH, ATTACK_HEIGHT);
+        this.rect = new GameRectEntity(0, 0, 16, 16);  // GIẢM: nhỏ hơn cho mèo (từ 20,20)
+        this.rectAttack = new GameRect(0, 0, 20, 8);   // GIẢM: vùng tấn công nhỏ hơn (từ 25,10)
 
         this.hpMax = 9;
         this.hp = this.hpMax;
@@ -96,13 +87,6 @@ public class Player {
         this.damage = new GameDamage(0, GameDamageType.FIRE);
         this.isAttacking = false;
         this.canDealDamage = false;
-        this.attackAnimationCounter = 0;
-
-        this.isPushing = false;
-        this.isClimbing = false;
-        this.isThrowing = false;
-        this.isHurt = false;
-        this.hurtTimer = 0;
 
         this.speedX = 3f;
         this.speedY = 0f;
@@ -118,60 +102,26 @@ public class Player {
         this.jumpFrames = 0f;
 
         this.isDirRight = true;
-        this.showDust = false;
 
-        this.animations = new HashMap<>();
-        this.currentAnimationKey = "idle_right";
-        this.wasJumping = false;
-        this.wasAttacking = false;
+        GameRect spriteRect = new GameRect(0, 0, 32, 32);  // Kích thước frame mèo
 
-        initializeAnimations();
+        // Tạo sprite idle cho mèo
+        this.spriteIdleRight = GameManagerSpritePlayer.createSpriteCatIdleRight(spriteRect);
+        this.spriteIdleLeft = GameManagerSpritePlayer.createSpriteCatIdleLeft(spriteRect);
 
-        this.currentSprite = this.animations.get("idle_right");
+        // Dùng sprite idle cho tất cả animation khác
+        this.spriteJumpRight = this.spriteIdleRight;
+        this.spriteJumpLeft = this.spriteIdleLeft;
+        this.spriteRunRight = this.spriteIdleRight;
+        this.spriteRunLeft = this.spriteIdleLeft;
+        this.spriteAttackRight = this.spriteIdleRight;
+        this.spriteAttackLeft = this.spriteIdleLeft;
 
-        // Tạo dust sprite
-        this.dustSprite = createDustSprite();
+        this.spriteDeath = this.spriteIdleRight;  // Dùng sprite idle cho death
+        this.spriteDeath.reset();
 
+        this.setCurrentSprite(this.spriteIdleRight);
         this.setSpritePosition();
-    }
-
-    private GameSpriteAnimation createDustSprite() {
-        try {
-            return GameManagerSpritePlayer.createSpriteDust(new GameRect(0, 0, 86, 86));
-        } catch (Exception e) {
-            return null;
-        }
-    }
-
-    private void initializeAnimations() {
-        // Kích thước sprite cho KNIGHT (86x86)
-        GameRect spriteRect = new GameRect(0, 0, 86, 86);
-
-        this.animations.put("idle_right", GameManagerSpritePlayer.createSpriteOwletIdleRight(spriteRect));
-        this.animations.put("idle_left", GameManagerSpritePlayer.createSpriteOwletIdleLeft(spriteRect));
-
-        this.animations.put("run_right", GameManagerSpritePlayer.createSpriteOwletRunRight(spriteRect));
-        this.animations.put("run_left", GameManagerSpritePlayer.createSpriteOwletRunLeft(spriteRect));
-
-        this.animations.put("walk_right", GameManagerSpritePlayer.createSpriteOwletWalkRight(spriteRect));
-        this.animations.put("walk_left", GameManagerSpritePlayer.createSpriteOwletWalkLeft(spriteRect));
-
-        this.animations.put("jump_right", GameManagerSpritePlayer.createSpriteOwletJumpRight(spriteRect));
-        this.animations.put("jump_left", GameManagerSpritePlayer.createSpriteOwletJumpLeft(spriteRect));
-
-        this.animations.put("attack1_right", GameManagerSpritePlayer.createSpriteOwletAttack1Right(spriteRect));
-        this.animations.put("attack1_left", GameManagerSpritePlayer.createSpriteOwletAttack1Left(spriteRect));
-
-        this.animations.put("attack2_right", GameManagerSpritePlayer.createSpriteOwletAttack2Right(spriteRect));
-        this.animations.put("attack2_left", GameManagerSpritePlayer.createSpriteOwletAttack2Left(spriteRect));
-
-        this.animations.put("walk_attack_right", GameManagerSpritePlayer.createSpriteOwletWalkAttackRight(spriteRect));
-        this.animations.put("walk_attack_left", GameManagerSpritePlayer.createSpriteOwletWalkAttackLeft(spriteRect));
-
-        this.animations.put("hurt_right", GameManagerSpritePlayer.createSpriteOwletHurtRight(spriteRect));
-        this.animations.put("hurt_left", GameManagerSpritePlayer.createSpriteOwletHurtLeft(spriteRect));
-
-        this.animations.put("death", GameManagerSpritePlayer.createSpriteOwletDeath(spriteRect));
     }
 
     public void setScene(Scene scene) {
@@ -180,7 +130,6 @@ public class Player {
 
     private void resetJump() {
         this.jumpFrames = 0f;
-        this.speedY = 0f;
     }
 
     public int getHp() {
@@ -261,6 +210,7 @@ public class Player {
     public void setPosition(int x, int y) {
         this.rect.setX(x);
         this.rect.setY(y);
+
         this.setSpritePosition();
     }
 
@@ -287,29 +237,12 @@ public class Player {
             this.isJump = true;
             this.keyJump = true;
             this.canDoubleJump = true;
-            this.wasJumping = true;
-
-            // Show dust effect
-            this.showDustEffect();
         } else if (GameSaveManager.getSave().isBossDefeated() && this.canDoubleJump && this.hp > 0) {
             GameManagerAudio.getAudioPlayerJump().play();
 
             this.canDoubleJump = false;
+
             this.toJumpSpecial();
-
-            // Show dust effect for double jump
-            this.showDustEffect();
-        }
-    }
-
-    private void showDustEffect() {
-        this.showDust = true;
-        if (this.dustSprite != null) {
-            this.dustSprite.reset();
-            this.dustSprite.setPosition(
-                    (int)(this.rect.getX() + (this.isDirRight ? -10 : HITBOX_WIDTH + 10)),
-                    (int)(this.rect.getY() + HITBOX_HEIGHT - 20)
-            );
         }
     }
 
@@ -323,19 +256,11 @@ public class Player {
     }
 
     public void toAttack() {
-        if (!this.keyAttack && !this.isAttacking && this.hp > 0) {
+        if (!this.keyAttack && !this.isAttacking && this.isOnTheFloor() && this.hp > 0) {
             GameManagerAudio.getAudioPlayerAttack().play();
 
             this.keyAttack = true;
             this.isAttacking = true;
-            this.wasAttacking = true;
-            this.attackAnimationCounter = 0;
-
-            // Reset attack animation khi bắt đầu tấn công
-            String attackKey = this.isDirRight ? "attack1_right" : "attack1_left";
-            if (this.animations.containsKey(attackKey)) {
-                this.animations.get(attackKey).reset();
-            }
         }
     }
 
@@ -371,38 +296,27 @@ public class Player {
     private void applyGravity() {
         this.speedY += this.scene.getGravity();
 
-        // Giới hạn tốc độ rơi
         if (this.speedY > 7f) {
             this.speedY = 7f;
         }
 
-        // Kiểm tra từng bước nhỏ để tránh xuyên qua tile
-        float step = 0.5f;
-        for (float i = 0f; i <= this.speedY; i += step) {
+        for (float i = 0f; i <= this.speedY; i += 0.5f) {
             if (!this.isOnTheFloor()) {
-                this.rect.setY(this.rect.getY() + step);
+                this.rect.setY(this.rect.getY() + 0.5f);
             } else {
-                // Khi chạm đất, reset speedY và đặt nhân vật lên trên tile
                 this.speedY = 0f;
                 this.canDoubleJump = false;
-
-                // Điều chỉnh vị trí để không bị lún xuống tile
-                while (!this.scene.isFree(new GameRectEntity(this.rect.getX(), this.rect.getY() + 0.1f,
-                        this.rect.getWidth(), this.rect.getHeight()).getRect())) {
-                    this.rect.setY(this.rect.getY() - 0.1f);
-                }
                 break;
             }
         }
     }
 
     private void toMove() {
-        if (this.keyRight && !this.isAttacking && !this.isThrowing) {
+        if (this.keyRight && !this.isAttacking) {
             this.isDirRight = true;
 
             for (float i = 0f; i <= this.speedX; i += 0.5f) {
-                if (this.scene.isFree(new GameRectEntity(this.rect.getX() + 0.5f, this.rect.getY(),
-                        this.rect.getWidth(), this.rect.getHeight()).getRect())) {
+                if (this.scene.isFree(new GameRectEntity(this.rect.getX() + 0.5f, this.rect.getY(), this.rect.getWidth(), this.rect.getHeight()).getRect())) {
                     this.rect.setX(this.rect.getX() + 0.5f);
 
                     if (!this.isJump && !this.isOnTheFloor()) {
@@ -414,12 +328,11 @@ public class Player {
             }
         }
 
-        if (this.keyLeft && !this.isAttacking && !this.isThrowing) {
+        if (this.keyLeft && !this.isAttacking) {
             this.isDirRight = false;
 
             for (float i = 0f; i <= this.speedX; i += 0.5f) {
-                if (this.scene.isFree(new GameRectEntity(this.rect.getX() - 0.5f, this.rect.getY(),
-                        this.rect.getWidth(), this.rect.getHeight()).getRect())) {
+                if (this.scene.isFree(new GameRectEntity(this.rect.getX() - 0.5f, this.rect.getY(), this.rect.getWidth(), this.rect.getHeight()).getRect())) {
                     this.rect.setX(this.rect.getX() - 0.5f);
 
                     if (!this.isJump && !this.isOnTheFloor()) {
@@ -433,7 +346,6 @@ public class Player {
     }
 
     private void jump() {
-        // Tốc độ nhảy theo frame
         if (this.jumpFrames < 10f) {
             this.speedY = 8f;
         } else if (this.jumpFrames < 20f) {
@@ -448,253 +360,128 @@ public class Player {
             this.speedY = 3f;
         }
 
-        // Di chuyển lên trên
         for (float i = 0f; i <= this.speedY; i += 0.5f) {
-            if (this.jumpFrames < this.jumpHeight &&
-                    this.scene.isFree(new GameRectEntity(this.rect.getX(), this.rect.getY() - 0.5f,
-                            this.rect.getWidth(), this.rect.getHeight()).getRect())) {
+            if (this.jumpFrames < this.jumpHeight && this.scene.isFree(new GameRectEntity(this.rect.getX(), this.rect.getY() - 0.5f, this.rect.getWidth(), this.rect.getHeight()).getRect())) {
                 this.rect.setY(this.rect.getY() - 0.5f);
                 this.jumpFrames += 0.5f;
             } else {
-                // Chạm trần hoặc đạt độ cao tối đa
                 this.speedY = 0f;
                 this.jumpFrames = 0f;
                 this.isJump = false;
-                this.wasJumping = false;
                 break;
             }
-        }
-
-        // Kiểm tra nếu đã chạm đất
-        if (this.isOnTheFloor()) {
-            this.isJump = false;
-            this.jumpFrames = 0f;
-            this.wasJumping = false;
-
-            // Show dust effect when landing
-            this.showDustEffect();
         }
     }
 
     private boolean isOnTheFloor() {
-        // Kiểm tra 5 pixel dưới chân nhân vật
-        for (float i = 0.5f; i <= 5f; i += 0.5f) {
-            if (!this.scene.isFree(new GameRectEntity(this.rect.getX(), this.rect.getY() + i,
-                    this.rect.getWidth(), this.rect.getHeight()).getRect())) {
-                return true;
-            }
-        }
-        return false;
+        return !this.scene.isFree(new GameRectEntity(this.rect.getX(), this.rect.getY() + 0.5f, this.rect.getWidth(), this.rect.getHeight()).getRect());
     }
 
     private void setSpritePosition() {
-        int x = (int) this.rect.getRect().getX() + SPRITE_OFFSET_X;
-        int y = (int) this.rect.getRect().getY() + SPRITE_OFFSET_Y;
-
-        this.currentSprite.setPosition(x, y);
-
-        if (this.showDust && this.dustSprite != null) {
-            this.dustSprite.setPosition(
-                    (int)(this.rect.getX() + (this.isDirRight ? -10 : HITBOX_WIDTH + 10)),
-                    (int)(this.rect.getY() + HITBOX_HEIGHT - 20)
-            );
+        // ĐIỀU CHỈNH OFFSET CHO MÈO 32x32
+        if (this.isDirRight) {
+            this.currentSprite.setPosition(this.rect.getRect().getX() - 8, this.rect.getRect().getY() - 8);
+        } else {
+            this.currentSprite.setPosition(this.rect.getRect().getX() - 8, this.rect.getRect().getY() - 8);
         }
     }
 
-    private String determineAnimationKey() {
-        if (this.hp <= 0) {
-            return "death";
-        }
-
-        // Hurt animation
-        if (this.isHurt && this.hurtTimer > 0) {
-            return this.isDirRight ? "hurt_right" : "hurt_left";
-        }
-
-        if (this.isAttacking) {
-            // Khi đang tấn công, luôn giữ attack animation
-            this.wasAttacking = true;
-
-            if (this.keyRight || this.keyLeft) {
-                return this.isDirRight ? "walk_attack_right" : "walk_attack_left";
-            } else {
-                return this.isDirRight ? "attack1_right" : "attack1_left";
+    private void setCurrentSprite(GameSpriteAnimation newSprite) {
+        if (this.currentSprite != newSprite) {
+            if (this.currentSprite != null) {
+                this.currentSprite.reset();
             }
-        } else if (this.isJump || !this.isOnTheFloor()) {
-            // Khi nhảy, luôn giữ jump animation
-            this.wasJumping = true;
-            return this.isDirRight ? "jump_right" : "jump_left";
-        } else if (this.keyRight && this.keyLeft) {
-            return this.isDirRight ? "idle_right" : "idle_left";
-        } else if (this.keyRight || this.keyLeft) {
-            if (this.speedX > 2.5f) {
-                return this.isDirRight ? "run_right" : "run_left";
-            } else {
-                return this.isDirRight ? "walk_right" : "walk_left";
-            }
-        } else {
-            return this.isDirRight ? "idle_right" : "idle_left";
+
+            this.currentSprite = newSprite;
         }
+    }
+
+    private void setCamera() {
+        Camera.x = Camera.clamp(this.rect.getRect().getX() - (this.scene.getGame().getGameWidth() / 2), 0, this.scene.getWidth() * this.scene.getSizeBaseTiles() - this.scene.getGame().getGameWidth());
+        Camera.y = Camera.clamp(this.rect.getRect().getY() - (this.scene.getGame().getGameHeight() / 2), 0, this.scene.getHeight() * this.scene.getSizeBaseTiles() - this.scene.getGame().getGameHeight());
     }
 
     public void tick() {
         if (this.hp <= 0) {
-            String newKey = "death";
-            if (!newKey.equals(this.currentAnimationKey)) {
-                this.currentAnimationKey = newKey;
-                this.currentSprite = this.animations.get(newKey);
-                if (this.currentSprite != null) {
-                    this.currentSprite.reset();
-                    this.setSpritePosition();
-                }
-            }
-            if (this.currentSprite != null) {
-                this.currentSprite.tick();
-            }
+            this.currentSprite = this.spriteDeath;
+            this.currentSprite.tick();
             return;
         }
 
-        // Update hurt timer
-        if (this.hurtTimer > 0) {
-            this.hurtTimer--;
-            if (this.hurtTimer <= 0) {
-                this.isHurt = false;
-            }
-        }
-
-        // Handle poison
         if (this.isPoisoning && this.hp > 1) {
             this.poisonControl++;
 
             if (this.poisonControl == 300) {
                 GameManagerAudio.getAudioPlayerHit().play();
+
                 this.hp--;
                 this.poisonControl = 0;
-
-                this.isHurt = true;
-                this.hurtTimer = 10;
             }
         } else {
             this.poisonControl = 0;
             this.isPoisoning = false;
         }
 
-        // Handle shield
         if (this.shieldDamage.isBefore(LocalDateTime.now())) {
             this.shieldActive = false;
-            if (this.currentSprite != null) {
-                this.currentSprite.setAlpha(1f);
-            }
+            this.currentSprite.setAlpha(1f);
         } else {
             this.shieldActive = true;
-            if (this.currentSprite != null) {
-                this.currentSprite.setAlpha(0.5f);
-            }
+            this.currentSprite.setAlpha(0.5f);
         }
 
-        // Handle jump
         if (this.isJump) {
             this.jump();
         } else {
             this.applyGravity();
         }
 
-        // Handle movement
         this.toMove();
 
-        // Xác định animation mới
-        String newAnimationKey = this.determineAnimationKey();
-
-        // Chỉ đổi animation nếu khác với hiện tại và tồn tại trong map
-        if (!newAnimationKey.equals(this.currentAnimationKey) && this.animations.containsKey(newAnimationKey)) {
-            // Đặc biệt: không đổi animation nếu đang trong jump/attack và chưa kết thúc
-            if ((this.currentAnimationKey.contains("jump") && !this.isOnTheFloor()) ||
-                    (this.currentAnimationKey.contains("attack") && this.isAttacking)) {
-                // Giữ nguyên animation hiện tại
-            } else {
-                this.currentAnimationKey = newAnimationKey;
-                GameSpriteAnimation newSprite = this.animations.get(newAnimationKey);
-
-                if (newSprite != null) {
-                    this.currentSprite = newSprite;
-                    this.setSpritePosition();
-                }
-            }
-        }
-
-        // Update attack position
+        // Mèo chỉ có idle animation, luôn dùng sprite idle
         if (this.isDirRight) {
-            this.rectAttack.setX((int)(this.rect.getX() + HITBOX_WIDTH));
+            this.setCurrentSprite(this.spriteIdleRight);
         } else {
-            this.rectAttack.setX((int)(this.rect.getX() - ATTACK_WIDTH));
+            this.setCurrentSprite(this.spriteIdleLeft);
         }
-        this.rectAttack.setY((int)(this.rect.getY() + 20));
+
+        // ĐIỀU CHỈNH VÙNG TẤN CÔNG CHO MÈO
+        if (this.isDirRight) {
+            this.rectAttack.setX((int) this.rect.getX() + 16);  // GIẢM từ 20
+        } else {
+            this.rectAttack.setX((int) this.rect.getX() - 20);  // GIẢM từ 31
+        }
+
+        this.rectAttack.setY((int) this.rect.getY() + 8);  // GIẢM từ 11
 
         this.setSpritePosition();
 
-        // Update animation
-        if (this.currentSprite != null) {
-            this.currentSprite.tick();
-        }
+        this.currentSprite.tick();
 
-        // Handle dust effect
-        if (this.showDust && this.dustSprite != null) {
-            this.dustSprite.tick();
-
-            if (this.dustSprite.finishedAnimation()) {
-                this.showDust = false;
-                this.dustSprite.reset();
-            }
-        }
-
-        // Handle attacking
         if (this.isAttacking) {
-            this.attackAnimationCounter++;
-
-            // Allow dealing damage ở frame giữa
-            if (this.currentSprite != null &&
-                    this.currentSprite.getIndex() >= 2 && this.currentSprite.getIndex() <= 4) {
+            if (this.currentSprite.getIndex() == 2 || this.currentSprite.getIndex() == 3 || this.currentSprite.getIndex() == 4) {
                 this.canDealDamage = true;
             } else {
                 this.canDealDamage = false;
             }
 
-            // Kết thúc attack sau khi animation xong hoặc quá thời gian
-            if ((this.currentSprite != null && this.currentSprite.finishedAnimation()) ||
-                    this.attackAnimationCounter > 40) {
+            if (this.currentSprite.finishedAnimation()) {
                 this.isAttacking = false;
+                this.currentSprite.reset();
                 this.canDealDamage = false;
-                this.attackAnimationCounter = 0;
-                this.wasAttacking = false;
             }
         }
 
         this.setCamera();
     }
 
-    private void setCamera() {
-        Camera.x = Camera.clamp(this.rect.getRect().getX() - (this.scene.getGame().getGameWidth() / 2),
-                0, this.scene.getWidth() * this.scene.getSizeBaseTiles() - this.scene.getGame().getGameWidth());
-        Camera.y = Camera.clamp(this.rect.getRect().getY() - (this.scene.getGame().getGameHeight() / 2),
-                0, this.scene.getHeight() * this.scene.getSizeBaseTiles() - this.scene.getGame().getGameHeight());
-    }
-
     public void render(Graphics render) {
-        // Render dust effect
-        if (this.showDust && this.dustSprite != null) {
-            this.dustSprite.render(render);
+        if (this.isPoisoning) {
+            this.currentSprite.renderSpritesSecondary(render);
+        } else {
+            this.currentSprite.render(render);
         }
 
-        // Render player
-        if (this.currentSprite != null) {
-            if (this.isPoisoning) {
-                this.currentSprite.renderSpritesSecondary(render);
-            } else {
-                this.currentSprite.render(render);
-            }
-        }
-
-        // Render UI
         this.renderHp(render);
         this.renderAttack(render);
     }
@@ -720,4 +507,5 @@ public class Player {
 
         render.drawRect(165, 5, 90, 20);
     }
+
 }
