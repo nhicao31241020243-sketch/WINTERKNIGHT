@@ -2,6 +2,8 @@ package dyrvania.scenes.entities;
 
 import java.awt.Graphics;
 import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.Map;
 
 import dyrvania.generics.Camera;
 import dyrvania.generics.GameColors;
@@ -11,7 +13,6 @@ import dyrvania.generics.GameRect;
 import dyrvania.generics.GameRectEntity;
 import dyrvania.generics.GameSpriteAnimation;
 import dyrvania.managers.GameManagerAudio;
-import dyrvania.managers.GameManagerSpriteDeath;
 import dyrvania.managers.entities.GameManagerSpritePlayer;
 import dyrvania.resources.GameFont;
 import dyrvania.saves.GameSaveManager;
@@ -181,6 +182,8 @@ public class Player {
 
             this.hp -= damage.getDamage();
             this.shieldDamage = LocalDateTime.now().plusSeconds(this.shieldTime);
+            this.isHurt = true;
+            this.hurtTimer = 15;
 
             if (this.hp < 0) {
                 this.hp = 0;

@@ -40,7 +40,7 @@ public class Spritesheet {
 			auxSpritesheetIcons = ImageIO.read(Spritesheet.class.getResource("/sprites/icons.png"));
 			auxSpritesheetDeath = ImageIO.read(Spritesheet.class.getResource("/sprites/death.png"));
 			auxSpritesheetDeathBlue = ImageIO.read(Spritesheet.class.getResource("/sprites/death-blue.png"));
-			auxSpritesheetPlayer = ImageIO.read(Spritesheet.class.getResource("/sprites/player.png"));
+			auxSpritesheetPlayer = ImageIO.read(Spritesheet.class.getResource("/sprites/HELLO.png"));
 			auxSpritesheetThing = ImageIO.read(Spritesheet.class.getResource("/sprites/thing.png"));
 			auxSpritesheetSkull = ImageIO.read(Spritesheet.class.getResource("/sprites/skull.png"));
 			auxSpritesheetSkeleton = ImageIO.read(Spritesheet.class.getResource("/sprites/skeleton.png"));
