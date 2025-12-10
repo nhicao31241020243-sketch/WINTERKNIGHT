@@ -1,4 +1,4 @@
-# Dyrvania
+# Winter Knight
 
 A simple metroidvania game
 
