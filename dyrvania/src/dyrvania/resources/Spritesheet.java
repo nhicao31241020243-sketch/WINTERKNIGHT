@@ -87,11 +87,11 @@ public class Spritesheet {
             // CÁC FILE KHÁC
             auxSpritesheetDeath = ImageIO.read(Spritesheet.class.getResource("/sprites/death.png"));
             auxSpritesheetDeathBlue = ImageIO.read(Spritesheet.class.getResource("/sprites/death-blue.png"));
-            auxSpritesheetPlayer = ImageIO.read(Spritesheet.class.getResource("/sprites/HELLO.png"));
+            auxSpritesheetPlayer = ImageIO.read(Spritesheet.class.getResource("/sprites/player.png"));
             auxSpritesheetThing = ImageIO.read(Spritesheet.class.getResource("/sprites/thing.png"));
             auxSpritesheetSkull = ImageIO.read(Spritesheet.class.getResource("/sprites/skull.png"));
             auxSpritesheetSkeleton = ImageIO.read(Spritesheet.class.getResource("/sprites/skeleton.png"));
-            auxSpritesheetBoss = ImageIO.read(Spritesheet.class.getResource("/sprites/boss.png"));
+            auxSpritesheetBoss = ImageIO.read(Spritesheet.class.getResource("/sprites/bossold.png"));
             auxSpritesheetBackground = ImageIO.read(Spritesheet.class.getResource("/sprites/backgroundOLD.png"));
         } catch (Exception e) {
             Main.exitWithError(StringError.ERROR_LOADING_SPRITES.getValue());
