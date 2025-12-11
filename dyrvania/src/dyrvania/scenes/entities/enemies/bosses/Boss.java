@@ -9,7 +9,7 @@ import dyrvania.managers.GameManagerAudio;
 import dyrvania.managers.GameManagerSpriteDeath;
 import dyrvania.managers.entities.enemies.bosses.GameManagerSpriteBoss;
 import dyrvania.scenes.Scene;
-import dyrvania.scenes.entities.enemies.Golem;
+import dyrvania.scenes.entities.enemies.Skeleton;
 import dyrvania.scenes.objects.Spawn;
 
 public class Boss {
@@ -112,7 +112,7 @@ public class Boss {
 				this.currentSprite = this.spriteIdle;
 
 				for (Spawn spawn : this.scene.getSpawns()) {
-					this.scene.getEnemies().add(new Golem(this.scene, spawn.getRect().getX(), spawn.getRect().getY() - 8));
+					this.scene.getEnemies().add(new Skeleton(this.scene, spawn.getRect().getX(), spawn.getRect().getY() - 8));
 				}
 			}
 
