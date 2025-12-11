@@ -15,14 +15,14 @@ public class Credits extends Screen {
 	public Credits(Game game) {
 		super(game, StringScreen.CREDITS.getValue());
 
-		this.addText("Game design and programmer: Júlio Igreja", 120);
+		this.addText("Cao Ha Nhi", 120);
 		this.addText("GitHub: https://github.com/JulioEvencio", 150);
-		this.addText("Sprites (Open Game Art):", 190);
-		this.addText("StumpyStrust, itsmars, ansimuz and pauliuw", 230);
-		this.addText("Music and sounds (Open Game Art):", 270);
-		this.addText("qubodup, nene, IgnasD, KASTLE Knight, TinyWorlds,", 310);
-		this.addText("Fupi, wobbleboxx, freestockimages, HydroGene and", 350);
-		this.addText("Eldritch Grim", 390);
+		this.addText("Phan Le Hieu", 190);
+		this.addText("Tran Trung Nghia", 230);
+		this.addText("Dinh Sy Hoang Quan", 270);
+		this.addText("Huynh Gia Tin", 310);
+		this.addText("DAI HOC KINH TE TP. HCM - UEH", 350);
+		this.addText("ClassOverFlow", 390);
 
 		int rightX = game.getGameWidth() - GameButton.getWidth() - 25;
 
