@@ -60,7 +60,7 @@ public class Spritesheet {
 
         try {
             // LOAD TẤT CẢ FILE NHƯ CŨ
-            auxSpritesheetGUI = ImageIO.read(Spritesheet.class.getResource("/sprites/gui22.png"));
+            auxSpritesheetGUI = ImageIO.read(Spritesheet.class.getResource("/sprites/guioldoldtoo.png"));
             auxSpritesheetTiles = ImageIO.read(Spritesheet.class.getResource("/sprites/tiles.png"));
 
 
