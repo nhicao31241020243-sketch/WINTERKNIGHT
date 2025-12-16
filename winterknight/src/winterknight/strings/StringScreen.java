@@ -31,22 +31,22 @@ public class StringScreen {
 
 	public static final GameString ENTER_CONTINUE = new GameString("Press enter to continue");
 
-	public static final GameString LORE_LINE_01 = new GameString("Peace reigned under protection of the great empire");
-	public static final GameString LORE_LINE_02 = new GameString("Humanity thrived");
-	public static final GameString LORE_LINE_03 = new GameString("But every empire must fall");
-	public static final GameString LORE_LINE_04 = new GameString("On a beautiful night, the Bloody Moon appeared");
-	public static final GameString LORE_LINE_05 = new GameString("Bringing with it the creatures of the night");
-	public static final GameString LORE_LINE_06 = new GameString("Despite the grandeur of the empire");
-	public static final GameString LORE_LINE_07 = new GameString("It succumbed within a few weeks");
-	public static final GameString LORE_LINE_08 = new GameString("It seemed like the end of humanity");
-	public static final GameString LORE_LINE_09 = new GameString("But then emerged the Order of Dyrvanias");
-	public static final GameString LORE_LINE_10 = new GameString("A group of skilled warriors");
-	public static final GameString LORE_LINE_11 = new GameString("After a long battle");
-	public static final GameString LORE_LINE_12 = new GameString("The Bloody Moon was sealed");
-	public static final GameString LORE_LINE_13 = new GameString("But that was long ago");
-	public static final GameString LORE_LINE_14 = new GameString("Today, for many, it's just a legend");
-	public static final GameString LORE_LINE_15 = new GameString("But recently...");
-	public static final GameString LORE_LINE_16 = new GameString("The Moon has been turning increasingly red");
-	public static final GameString LORE_LINE_17 = new GameString("And strange events have begun to occur");
+	public static final GameString LORE_LINE_01 = new GameString("Vào một mùa đông lạnh giá, ngay trước Giáng Sinh.");
+	public static final GameString LORE_LINE_02 = new GameString("Khi sinh viên UEH đang sống trong nỗi sợ mang tên deadline.");
+	public static final GameString LORE_LINE_03 = new GameString("Ở một trường U giấu tên, có một sinh viên năm hai tên Quân.");
+	public static final GameString LORE_LINE_04 = new GameString("Quân từng tin mình sẽ tốt nghiệp đúng hạn, cho đến khi bảng điểm lên tiếng.");
+	public static final GameString LORE_LINE_05 = new GameString("Bên cạnh anh là Nhi, người luôn nhắc: “Môn này hình như học lại rồi?”");
+	public static final GameString LORE_LINE_06 = new GameString("Tín xuất hiện đúng lúc nhất, thường là để báo thêm một môn 3 tín.");
+	public static final GameString LORE_LINE_07 = new GameString("Hiếu thì lạc quan, vì nghĩ qua môn là chuyện… kiếp sau tính.");
+	public static final GameString LORE_LINE_08 = new GameString("Còn Nghĩa luôn nói: “Thôi ráng đi, học lại cũng là kỷ niệm.”");
+	public static final GameString LORE_LINE_09 = new GameString("Cả nhóm mang theo thanh kiếm nặng như học phí cuối kỳ.");
+	public static final GameString LORE_LINE_10 = new GameString("Mỗi con quái bị hạ gục giống như qua được một môn điểm C.");
+	public static final GameString LORE_LINE_11 = new GameString("Nhưng chỉ cần sơ sẩy, cả nhóm sẽ quay lại từ tuần học đầu tiên.");
+	public static final GameString LORE_LINE_12 = new GameString("Giáng Sinh đến, người khác nhận quà, họ nhận mail học lại.");
+	public static final GameString LORE_LINE_13 = new GameString("Chuông nhà thờ vang lên nghe như tiếng hệ thống đăng ký môn mở lúc 0h.");
+	public static final GameString LORE_LINE_14 = new GameString("Những quái vật băng giá trông rất giống bài tập nhóm không ai làm.");
+	public static final GameString LORE_LINE_15 = new GameString("Quân vẫn dẫn cả nhóm tiến lên, dù GPA đang tụt dốc không phanh.");
+	public static final GameString LORE_LINE_16 = new GameString("Bởi vì bỏ cuộc đồng nghĩa với việc nợ tín chỉ vĩnh viễn.");
+	public static final GameString LORE_LINE_17 = new GameString("Và hành trình trả nợ mùa đông của hội sinh viên UEH bắt đầu từ đây.");
 
 }

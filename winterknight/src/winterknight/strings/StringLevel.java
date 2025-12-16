@@ -23,7 +23,7 @@ public class StringLevel {
 	public static final GameString INFO_DOUBLE_JUMP = new GameString("Double jump learned");
 	public static final GameString TUTORIAL_DOUBLE_JUMP = new GameString("Press the jump button 2 times");
 
-	public static final GameString INFO_THANK_YOU = new GameString("Thanks for playing!");
+	public static final GameString INFO_THANK_YOU = new GameString("Merry Christmas!!!");
 	public static final GameString INFO_SOON = new GameString("The game will soon have more levels");
 
 	public static final GameString INFO_GAME_OVER = new GameString("NGU!!!");
