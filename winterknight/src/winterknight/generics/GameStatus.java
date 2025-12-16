@@ -1,0 +1,22 @@
+package winterknight.generics;
+
+public enum GameStatus {
+
+	RUN,
+	PAUSE,
+	GAME_OVER,
+	NEW_GAME,
+	LORE,
+	LOAD_GAME,
+	TRANSITION,
+	OPENING_SCREEN,
+	SELECT_LANGUAGE,
+	MAIN_MENU,
+	CREDITS,
+	OPTIONS,
+	CONFIRM_NEW_GAME,
+	CONFIRM_MAIN_MENU,
+	NO_DATA,
+	EXIT;
+
+}

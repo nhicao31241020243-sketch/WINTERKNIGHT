@@ -8,7 +8,7 @@ Click [here](https://julio-igreja.itch.io/dyrvania) to download the game
 
 ## How to run
 
-This project is a simple Java application. The class `dyrvania.Main` is responsible for running the program
+This project is a simple Java application. The class `winterknight.Main` is responsible for running the program
 
 **NOTE 01: I recommend using JDK 8 or higher**
 

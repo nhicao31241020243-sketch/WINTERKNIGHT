@@ -1,0 +1,17 @@
+Nhấn F2 để bật/tắt chế độ toàn màn hình
+Nhấn F3 để hiện/ẩn FPS
+Nhấn F4 để bật/tắt nhạc
+Nhấn P hoặc ESC để tạm dừng trò chơi
+Nhấn phím A và D hoặc phím mũi tên trái và phải để di chuyển
+Nhấn Z, J hoặc PHÍM CÁCH để nhảy
+Nhấn X, phím K, chuột phải hoặc chuột trái để tấn công
+Thu thập kiếm để tăng sức tấn công
+Thu thập các linh hồn đỏ để tăng máu tối đa
+Nhấn Enter để lưu trò chơi
+Trò chơi đã được lưu
+Sinh lực đã được hồi phục
+Các hiệu ứng tiêu cực đã được loại bỏ
+Đã học được kỹ năng nhảy đôi
+Nhấn nút nhảy 2 lần
+Cảm ơn bạn đã chơi!
+Trò chơi sẽ sớm có thêm nhiều màn chơi hơn

@@ -1,0 +1,39 @@
+package winterknight.scenes.levels;
+
+import java.awt.image.BufferedImage;
+
+import javax.imageio.ImageIO;
+
+import winterknight.Game;
+import winterknight.Main;
+import winterknight.scenes.objects.Teleport;
+import winterknight.strings.StringError;
+
+public class SaveRight extends Save {
+
+	public SaveRight(Game game, Teleport teleport, String lastScene) {
+		super(game, teleport, lastScene);
+	}
+
+	@Override
+	public String currentLevelString() {
+		return "save-right";
+	}
+
+	@Override
+	protected BufferedImage loadLevel() {
+		try {
+			return ImageIO.read(this.getClass().getResource("/levels/save-02.png"));
+		} catch (Exception e) {
+			Main.exitWithError(StringError.ERROR_LOADING_FILES.getValue());
+		}
+
+		return null;
+	}
+
+	@Override
+	protected boolean isSceneSaveRight() {
+		return true;
+	}
+
+}
