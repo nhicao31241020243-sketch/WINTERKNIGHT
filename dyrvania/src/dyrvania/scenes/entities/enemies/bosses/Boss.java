@@ -22,9 +22,8 @@ public class Boss {
 	private final GameRect rect;
 
 	private int hp;
-	private final int hpMax;
 
-	private boolean hasAShield;
+    private boolean hasAShield;
 
 	private GameSpriteAnimation currentSprite;
 
@@ -41,8 +40,8 @@ public class Boss {
 
 		this.rect = new GameRect(this.newX, this.newY, 32, 32);
 
-		this.hpMax = 20;
-		this.hp = this.hpMax;
+        int hpMax = 20;
+		this.hp = hpMax;
 
 		GameRect spriteRect = new GameRect(0, 0, 128, 128);
 
