@@ -1,4 +1,4 @@
-# A SIMPLE METROIDVANIA PLATFORMER 2D GAME: WINTER KNIGHT PROJECT
+# A SIMPLE 2D METROIDVANIA PLATFORMER GAME: WINTER KNIGHT PROJECT
 ## INSPIRED GAME
 The idea of our game is inspired by the famous 2D platformer game Super Mario, in which players control a character to overcome obstacles, collect items, and defeat enemies throughout different levels.
 
