@@ -74,8 +74,9 @@ The ultimate goal of the game is to defeat the final boss and complete the game.
 <img src="images/15720.gif" width="600"><br><br>
 
 <div align="center">
-  <img src="images/knight1.gif" width="280">
-  <img src="images/knight2.gif" width="280">
+  <img src="images/knight1.gif" width="220">
+  <img src="images/knight2.gif" width="220">
+  <img src="images/golem.gif" width="220">
 </div>
 
 <br>
@@ -93,7 +94,7 @@ The ultimate goal of the game is to defeat the final boss and complete the game.
   <li>2D platformer gameplay</li>
   <li>Winter & Christmas-themed environment</li>
   <li>Animated knight character</li>
-  <li>Enemies and boss battle</li>
+  <li>Enemies including Golem and Boss</li>
   <li>Power-up items and collectibles</li>
 </ul>
 
@@ -106,6 +107,7 @@ The ultimate goal of the game is to defeat the final boss and complete the game.
 </ul>
 
 <hr>
+
 
 <p align="center">
   © 2025 Winter Knight. All rights reserved.<br>
