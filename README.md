@@ -46,5 +46,5 @@ We wish you a peaceful and joyful Christmas!
 Adobe photoshop; Paint 3D 
 https://itch.io/
 https://www.leshylabs.com/apps/sstool/
-______
+
 ## GALLERY
