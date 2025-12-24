@@ -2,7 +2,7 @@
 ## INSPIRED GAME
 The idea of our game is inspired by the famous 2D platformer game Super Mario, in which players control a character to overcome obstacles, collect items, and defeat enemies throughout different levels.
 
-The game is titled “Winter Knight” and is set in a winter-themed environment, which is suitable for the time when this project is carried out, as winter and Christmas are approaching. In the game, the player takes on the role of a UEH student who embarks on an adventure in a winter landscape, exploring various levels to search for treasures in order to pay off academic credit debts, while overcoming different challenges along the way.
+The game is titled “Winter Knight” and is set in a winter-themed environment, which is suitable for the time when this project is carried out, as Winter and Christmas are approaching. In the game, the player takes on the role of a UEH student who embarks on an adventure in a winter landscape, exploring various levels to search for treasures in order to pay off academic credit debts, while overcoming different challenges along the way.
 
 The ultimate goal of the game is to defeat the final boss and complete the game. During gameplay, Christmas-themed items are randomly placed along the path to enhance the player’s abilities and increase the overall enjoyment and engagement of the game.
 ## CONTRIBUTOR
@@ -19,8 +19,8 @@ Due to limited time and our current level of understanding in the field of game 
 
 We would also like to extend our heartfelt thanks to all members of our group for their enthusiasm, cooperation, and mutual support throughout the process of completing this project. Each member’s contribution played an important role in overcoming challenges and achieving our shared goals. WE DID IT, TOGETHER!
 
-Once again, we would like to express our heartfelt thanks.
-We wish you a peaceful and joyful Christmas!
+*Merry Christmas!*
+*Cao Ha Nhi*
 
 ## REFERENCES
 ### *Fonts*
