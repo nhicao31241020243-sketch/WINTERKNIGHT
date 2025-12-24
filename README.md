@@ -28,21 +28,25 @@ ______
 - License(s:https://creativecommons.org/publicdomain/zero/1.0/ 
 - https://opengameart.org/content/public-pixel-font 
 ### *Music:* 
-- attack.wav: Jumping man sounds | OpenGameArt.org 
-- game-over.wav: phải chịu - Instant Sound Effect Button | Myinstants 
-- jump.wav: Jumping man sounds | OpenGameArt.org 
-- hit-player.wav: 5 Hit Sounds + Dying | OpenGameArt.org 
-- Background Music: Wham - Last Christmas (8-bit) 
-- Boss Music: O Christmas Tree 
+attack.wav: https://opengameart.org/content/jumping-man-sounds
+game-over.wav: https://www.myinstants.com/en/instant/phai-chiu-50387/
+hit-player.wav: https://opengameart.org/content/jumping-man-sounds 
+Background Music: https://www.youtube.com/watch?v=DhPYy7PhL_0
+Boss Music: https://www.youtube.com/watch?v=7XVBGAPY7W8
+3. Nhân vật:
 ### *Characters:* 
 - Main Character: https://free-game-assets.itch.io/free-fantasy-knight
 - Enemy: 
-- Enemies: Skull, Things, Boss (Designed by the team) 
-- Items: Free 20+ Christmas Icon Pack (32x32) by SODA  
+- Enemies: Skull, Things, Boss (Designed by the team)
+### *Items*
+- Items: https://soda-1.itch.io/free-20-christmas-icon-pack-32x32
 ### *Background:* 
-- Winter Backgrounds: Free Winter Pixel Backgrounds by Free Game Assets (GUI, Sprite, Tilesets) 
-- Egyptian Background: Free Pixel Ancient Temple Backgrounds by Free Game Assets (GUI, Sprite, Tilesets)
-- Christmas Backgrounds: https://free-game-assets.itch.io/free-winter-holiday-2d
+- Winter Backgrounds: https://free-game-assets.itch.io/free-winter-nature-pixel-game-backgrounds
+- Egyptian Background: https://free-game-assets.itch.io/free-ancient-temple-pixel-game-backgrounds
+- Christmas Backgrounds: https://free-game-assets.itch.io/free-winter-holiday-2d-backgrounds
 ### *Supporting tools*
 Adobe photoshop; Paint 3D 
-itch.io; leshy lab
+https://itch.io/
+https://www.leshylabs.com/apps/sstool/
+______
+## *GALLERY*
