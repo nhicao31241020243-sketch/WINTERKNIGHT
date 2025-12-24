@@ -42,8 +42,9 @@ We would also like to extend our heartfelt thanks to all members of our group fo
 - Egyptian Background: https://free-game-assets.itch.io/free-ancient-temple-pixel-game-backgrounds
 - Christmas Backgrounds: https://free-game-assets.itch.io/free-winter-holiday-2d-backgrounds
 ### *Supporting tools*
-Adobe photoshop; Paint 3D 
-https://itch.io/
-https://www.leshylabs.com/apps/sstool/
+- Adobe photoshop
+- Paint 3D 
+- https://itch.io/
+- https://www.leshylabs.com/apps/sstool/
 
 ## GALLERY
