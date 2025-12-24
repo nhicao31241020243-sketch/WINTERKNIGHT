@@ -22,7 +22,7 @@ We would also like to extend our heartfelt thanks to all members of our group fo
 
 Once again, we would like to express our heartfelt thanks.
 We wish you a peaceful and joyful Christmas!
-______
+
 ## REFERENCES
 ### *Fonts:*
 - License(s:https://creativecommons.org/publicdomain/zero/1.0/ 
