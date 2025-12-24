@@ -9,7 +9,7 @@ We would also like to extend our heartfelt thanks to all members of our group fo
 
 *Merry Christmas!*
 
-*Cao Ha Nhi*
+*December 24, 2025* 
 
 ## CONTRIBUTOR
 - `31241020243` Cao Hà Nhi ([@nhicao31241020243-sketch](https://github.com/nhicao31241020243-sketch))
