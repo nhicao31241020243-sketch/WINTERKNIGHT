@@ -23,27 +23,25 @@ Once again, we would like to express our heartfelt thanks.
 We wish you a peaceful and joyful Christmas!
 ______
 ## REFERENCES
-1. Fonts:  
-License(s:https://creativecommons.org/publicdomain/zero/1.0/ 
-https://opengameart.org/content/public-pixel-font 
-2. Music: 
-attack.wav: Jumping man sounds | OpenGameArt.org 
-game-over.wav: phải chịu - Instant Sound Effect Button | Myinstants 
-jump.wav: Jumping man sounds | OpenGameArt.org 
-hit-player.wav: 5 Hit Sounds + Dying | OpenGameArt.org 
-Background Music: Wham - Last Christmas (8-bit) 
-Boss Music: O Christmas Tree 
-3. Characters:  
-Main Character: KNIGHT 
-Enemy: Skeleton 
-Enemies: Skull, Things, Boss (Designed by the team) 
-Items: Free 20+ Christmas Icon Pack (32x32) by SODA  
-4. Background: 
-Winter Backgrounds: Free Winter Pixel Backgrounds by Free Game Assets (GUI, 
-Sprite, Tilesets) 
-Egyptian Background: Free Pixel Ancient Temple Backgrounds by Free Game Assets 
-(GUI, Sprite, Tilesets) 
-Christmas Backgrounds: https://free-game-assets.itch.io/free-winter-holiday-2d
+- 1. Fonts:  
+- License(s:https://creativecommons.org/publicdomain/zero/1.0/ 
+- https://opengameart.org/content/public-pixel-font 
+- 2. Music: 
+- attack.wav: Jumping man sounds | OpenGameArt.org 
+- game-over.wav: phải chịu - Instant Sound Effect Button | Myinstants 
+- jump.wav: Jumping man sounds | OpenGameArt.org 
+- hit-player.wav: 5 Hit Sounds + Dying | OpenGameArt.org 
+- Background Music: Wham - Last Christmas (8-bit) 
+- Boss Music: O Christmas Tree 
+- 3. Characters:  
+- Main Character: KNIGHT 
+- Enemy: Skeleton 
+- Enemies: Skull, Things, Boss (Designed by the team) 
+- Items: Free 20+ Christmas Icon Pack (32x32) by SODA  
+- 4. Background: 
+- Winter Backgrounds: Free Winter Pixel Backgrounds by Free Game Assets (GUI, Sprite, Tilesets) 
+- Egyptian Background: Free Pixel Ancient Temple Backgrounds by Free Game Assets (GUI, Sprite, Tilesets)
+- Christmas Backgrounds: https://free-game-assets.itch.io/free-winter-holiday-2d
 5. Supporting tools
 Adobe photoshop; Paint 3D 
 itch.io; leshy lab
