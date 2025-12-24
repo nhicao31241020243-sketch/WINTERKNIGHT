@@ -1,8 +1,9 @@
 # A SIMPLE METROIDVANIA PLATFORMER 2D GAME: WINTER KNIGHT PROJECT
-- MÃ LỚP HỌC PHẦN: `25C1INF50900702` 
-- MÔN HỌC: `CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT`
-- TRƯỜNG: `ĐẠI HỌC KINH TẾ TP. HCM - UEH`
-- GIÁO VIÊN HƯỚNG DẪN: `ĐẶNG NGỌC HOÀNG THÀNH`
+The idea of our game is inspired by the famous 2D platformer game Super Mario, in which players control a character to overcome obstacles, collect items, and defeat enemies throughout different levels.
+
+The game is titled “Winter Knight” and is set in a winter-themed environment, which is suitable for the time when this project is carried out, as winter and Christmas are approaching. In the game, the player takes on the role of a UEH student who embarks on an adventure in a winter landscape, exploring various levels to search for treasures in order to pay off academic credit debts, while overcoming different challenges along the way.
+
+The ultimate goal of the game is to defeat the final boss and complete the game. During gameplay, Christmas-themed items are randomly placed along the path to enhance the player’s abilities and increase the overall enjoyment and engagement of the game.
 ## CONTRIBUTOR
 - `31241020243` Cao Hà Nhi ([@nhicao31241020243-sketch](https://github.com/nhicao31241020243-sketch))
 - `31241027187` Phan Lê Hiếu ([@PLHieu1212](https://github.com/PLHieu1212))
