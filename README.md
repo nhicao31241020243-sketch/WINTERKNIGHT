@@ -1,4 +1,5 @@
 # A SIMPLE METROIDVANIA PLATFORMER 2D GAME: WINTER KNIGHT PROJECT
+## INSPIRED GAME
 The idea of our game is inspired by the famous 2D platformer game Super Mario, in which players control a character to overcome obstacles, collect items, and defeat enemies throughout different levels.
 
 The game is titled “Winter Knight” and is set in a winter-themed environment, which is suitable for the time when this project is carried out, as winter and Christmas are approaching. In the game, the player takes on the role of a UEH student who embarks on an adventure in a winter landscape, exploring various levels to search for treasures in order to pay off academic credit debts, while overcoming different challenges along the way.
@@ -23,25 +24,25 @@ Once again, we would like to express our heartfelt thanks.
 We wish you a peaceful and joyful Christmas!
 ______
 ## REFERENCES
-- 1. Fonts:  
+### Fonts:  
 - License(s:https://creativecommons.org/publicdomain/zero/1.0/ 
 - https://opengameart.org/content/public-pixel-font 
-- 2. Music: 
+### Music: 
 - attack.wav: Jumping man sounds | OpenGameArt.org 
 - game-over.wav: phải chịu - Instant Sound Effect Button | Myinstants 
 - jump.wav: Jumping man sounds | OpenGameArt.org 
 - hit-player.wav: 5 Hit Sounds + Dying | OpenGameArt.org 
 - Background Music: Wham - Last Christmas (8-bit) 
 - Boss Music: O Christmas Tree 
-- 3. Characters:  
-- Main Character: KNIGHT 
-- Enemy: Skeleton 
+### Characters:  
+- Main Character: https://free-game-assets.itch.io/free-fantasy-knight
+- Enemy: 
 - Enemies: Skull, Things, Boss (Designed by the team) 
 - Items: Free 20+ Christmas Icon Pack (32x32) by SODA  
-- 4. Background: 
+### Background: 
 - Winter Backgrounds: Free Winter Pixel Backgrounds by Free Game Assets (GUI, Sprite, Tilesets) 
 - Egyptian Background: Free Pixel Ancient Temple Backgrounds by Free Game Assets (GUI, Sprite, Tilesets)
 - Christmas Backgrounds: https://free-game-assets.itch.io/free-winter-holiday-2d
-5. Supporting tools
+### Supporting tools
 Adobe photoshop; Paint 3D 
 itch.io; leshy lab
