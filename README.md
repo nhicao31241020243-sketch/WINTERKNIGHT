@@ -5,9 +5,10 @@
 - GIÁO VIÊN HƯỚNG DẪN: `ĐẶNG NGỌC HOÀNG THÀNH`
 ## THÀNH VIÊN NHÓM
 - `31241020243` Cao Hà Nhi ([@nhicao31241020243-sketch](https://github.com/nhicao31241020243-sketch))
-- `31241027187` Nguyễn Đạt Phúc ([@datphuc0406-create](https://github.com/datphuc0406-create))
-- `31241020009` Trần Nhựt Hào ([@haotran26](https://github.com/haotran26))
-- `31231570386` Dương Băng Băng ([@Bang-bang2805](https://github.com/Bang-bang2805))
+- `31241027187` Phan Lê Hiếu ([@PLHieu1212](https://github.com/PLHieu1212))
+- `31241020009` Huỳnh Gia Tín ([@tinhuynh31241020795-jpg](https://github.com/tinhuynh31241020795-jpg))
+- `31231570386` Đinh Sỹ Hoàng Quân ([@quantaplaptrinh](https://github.com/quantaplaptrinh))
+- `31231570386` Trần Trung Nghĩa ([@nghialailaptrinh2006](https://github.com/nghialailaptrinh2006))
 
 ______
 
