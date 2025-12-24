@@ -55,7 +55,7 @@ The ultimate goal of the game is to defeat the final boss and complete the game.
 
 ## GALLERY
 <div align="center">
-  <img src="images/logo.png" alt="Winter Knight Logo" width="300">
+  <img src="images/logo.png" alt="Winter Knight Logo" width="400">
 </div>
 
 <br>
