@@ -1,11 +1,11 @@
 # A SIMPLE 2D METROIDVANIA PLATFORMER GAME: WINTER KNIGHT PROJECT
 
 ## THANK YOU
-First and foremost, our group would like to express our sincere gratitude to our supervisor, Mr. Huynh Viet Tham, M.Sc., for creating favorable conditions for us to study and apply object-oriented programming knowledge through game design. This project has not only helped us gain practical experience but also stimulated our imagination and enhanced our creativity.
+Firstly, on behalf of our team, we would like to extend our sincere thanks to our supervisor - Mr. Huynh Viet Tham, M.Sc., for having created favorable conditions for us in order to study and apply object-oriented programming knowledge in game designing. This project has not only provided us good experience, but it has also triggered our imagination and creativity.
 
-Due to limited time and our current level of understanding in the field of game programming, the project inevitably contains certain shortcomings. We sincerely look forward to receiving your valuable feedback and evaluations so that the game can be further improved in the future.
+Owing to the constraints of time and the present level of knowledge that we have acquired in the related area of game programming, we have some shortcomings within the project. We eagerly await your feedback and assessments so that some further improvements can be brought into the game.
 
-We would also like to extend our heartfelt thanks to all members of our group for their enthusiasm, cooperation, and mutual support throughout the process of completing this project. Each member’s contribution played an important role in overcoming challenges and achieving our shared goals. 
+We would also like to thank members of our group for their support and collaboration throughout this process in carrying out this project. The contributions that each member made played a very critical part in overcoming obstacles that were in the way for us to attain this goal.
 
 WE DID IT, TOGETHER!
 
