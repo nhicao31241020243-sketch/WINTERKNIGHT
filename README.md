@@ -34,7 +34,7 @@ We wish you a peaceful and joyful Christmas!
 - Boss Music: https://www.youtube.com/watch?v=7XVBGAPY7W8
 ### *Characters* 
 - Main Character: https://free-game-assets.itch.io/free-fantasy-knight
-- Enemy: 
+- Enemy Skeleton: https://monopixelart.itch.io/golems-pack 
 - Enemies: Skull, Things, Boss (Designed by the team)
 ### *Items*
 - Items: https://soda-1.itch.io/free-20-christmas-icon-pack-32x32
