@@ -21,8 +21,6 @@ We would also like to extend our heartfelt thanks to all members of our group fo
 
 *Merry Christmas!*
 
-*Cao Ha Nhi*
-
 ## REFERENCES
 ### *Fonts*
 - License(s:https://creativecommons.org/publicdomain/zero/1.0/ 
