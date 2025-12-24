@@ -73,14 +73,18 @@ The ultimate goal of the game is to defeat the final boss and complete the game.
 
 <img src="images/15720.gif" width="600"><br><br>
 
+<div align="center">
+  <img src="images/knight1.gif" width="280">
+  <img src="images/knight2.gif" width="280">
+</div>
+
+<br>
+
 <img src="images/backgroundstart.png" width="600"><br><br>
 
 <img src="images/boss1.png" width="600"><br><br>
 
 <img src="images/christmas.png" width="600"><br><br>
-
-<img src="images/knight1.gif" width="300">
-<img src="images/knight2.gif" width="300">
 
 <hr>
 
@@ -102,6 +106,12 @@ The ultimate goal of the game is to defeat the final boss and complete the game.
 </ul>
 
 <hr>
+
+<p align="center">
+  © 2025 Winter Knight. All rights reserved.<br>
+  December 24, 2025
+</p>
+
 
 <p align="center">
   © 2025 Winter Knight. All rights reserved.<br>
