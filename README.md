@@ -54,3 +54,56 @@ The ultimate goal of the game is to defeat the final boss and complete the game.
 - https://www.leshylabs.com/apps/sstool/
 
 ## GALLERY
+<div align="center">
+  <img src="images/logo.png" alt="Winter Knight Logo" width="300">
+</div>
+
+<br>
+
+<h1 align="center">❄️ Winter Knight</h1>
+
+<p align="center">
+  A 2D platformer game inspired by classic games like Super Mario,<br>
+  set in a winter and Christmas-themed world.
+</p>
+
+<hr>
+
+<h2>🎮 Game Preview</h2>
+
+<img src="images/15720.gif" width="600"><br><br>
+
+<img src="images/backgroundstart.png" width="600"><br><br>
+
+<img src="images/boss1.png" width="600"><br><br>
+
+<img src="images/christmas.png" width="600"><br><br>
+
+<img src="images/knight1.gif" width="300">
+<img src="images/knight2.gif" width="300">
+
+<hr>
+
+<h2>🕹️ Features</h2>
+<ul>
+  <li>2D platformer gameplay</li>
+  <li>Winter & Christmas-themed environment</li>
+  <li>Animated knight character</li>
+  <li>Enemies and boss battle</li>
+  <li>Power-up items and collectibles</li>
+</ul>
+
+<hr>
+
+<h2>🛠️ Technologies</h2>
+<ul>
+  <li>Java</li>
+  <li>IntelliJ IDEA</li>
+</ul>
+
+<hr>
+
+<p align="center">
+  © 2025 Winter Knight. All rights reserved.<br>
+  December 24, 2025
+</p>
