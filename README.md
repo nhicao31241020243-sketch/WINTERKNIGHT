@@ -12,7 +12,6 @@ The ultimate goal of the game is to defeat the final boss and complete the game.
 - `31241024009` Đinh Sỹ Hoàng Quân ([@quantaplaptrinh](https://github.com/quantaplaptrinh))
 - `31241024610` Trần Trung Nghĩa ([@nghialailaptrinh2006](https://github.com/nghialailaptrinh2006))
 
-______
 ## THANK YOU
 First and foremost, our group would like to express our sincere gratitude to our supervisor, Mr. Huynh Viet Tham, M.Sc., for creating favorable conditions for us to study and apply object-oriented programming knowledge through game design. This project has not only helped us gain practical experience but also stimulated our imagination and enhanced our creativity.
 
