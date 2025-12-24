@@ -3,7 +3,7 @@
 - MÔN HỌC: `CẤU TRÚC DỮ LIỆU VÀ GIẢI THUẬT`
 - TRƯỜNG: `ĐẠI HỌC KINH TẾ TP. HCM - UEH`
 - GIÁO VIÊN HƯỚNG DẪN: `ĐẶNG NGỌC HOÀNG THÀNH`
-## THÀNH VIÊN NHÓM
+## CONTRIBUTOR
 - `31241020243` Cao Hà Nhi ([@nhicao31241020243-sketch](https://github.com/nhicao31241020243-sketch))
 - `31241027187` Phan Lê Hiếu ([@PLHieu1212](https://github.com/PLHieu1212))
 - `31241020009` Huỳnh Gia Tín ([@tinhuynh31241020795-jpg](https://github.com/tinhuynh31241020795-jpg))
