@@ -6,10 +6,10 @@ The game is titled “Winter Knight” and is set in a winter-themed environment
 The ultimate goal of the game is to defeat the final boss and complete the game. During gameplay, Christmas-themed items are randomly placed along the path to enhance the player’s abilities and increase the overall enjoyment and engagement of the game.
 ## CONTRIBUTOR
 - `31241020243` Cao Hà Nhi ([@nhicao31241020243-sketch](https://github.com/nhicao31241020243-sketch))
-- `31241027187` Phan Lê Hiếu ([@PLHieu1212](https://github.com/PLHieu1212))
-- `31241020009` Huỳnh Gia Tín ([@tinhuynh31241020795-jpg](https://github.com/tinhuynh31241020795-jpg))
-- `31231570386` Đinh Sỹ Hoàng Quân ([@quantaplaptrinh](https://github.com/quantaplaptrinh))
-- `31231570386` Trần Trung Nghĩa ([@nghialailaptrinh2006](https://github.com/nghialailaptrinh2006))
+- `31241020557` Phan Lê Hiếu ([@PLHieu1212](https://github.com/PLHieu1212))
+- `31241020795` Huỳnh Gia Tín ([@tinhuynh31241020795-jpg](https://github.com/tinhuynh31241020795-jpg))
+- `31241024009` Đinh Sỹ Hoàng Quân ([@quantaplaptrinh](https://github.com/quantaplaptrinh))
+- `31241024610` Trần Trung Nghĩa ([@nghialailaptrinh2006](https://github.com/nghialailaptrinh2006))
 
 ______
 ## THANK YOU
