@@ -13,6 +13,21 @@ WE DID IT, TOGETHER!
 
 *December 24, 2025* 
 
+<div align="center">
+  <img src="images/logo.png" alt="Winter Knight Logo" width="400">
+</div>
+
+<br>
+
+<h1 align="center">❄️ Winter Knight</h1>
+
+<p align="center">
+  A 2D platformer game inspired by classic games like Super Mario,<br>
+  set in a winter and Christmas-themed world.
+</p>
+
+<hr>
+
 ## CONTRIBUTOR
 - `31241020243` Cao Hà Nhi ([@nhicao31241020243-sketch](https://github.com/nhicao31241020243-sketch))
 - `31241020557` Phan Lê Hiếu ([@PLHieu1212](https://github.com/PLHieu1212))
@@ -54,21 +69,6 @@ The ultimate goal of the game is to defeat the final boss and complete the game.
 - https://www.leshylabs.com/apps/sstool/
 
 ## GALLERY
-<div align="center">
-  <img src="images/logo.png" alt="Winter Knight Logo" width="400">
-</div>
-
-<br>
-
-<h1 align="center">❄️ Winter Knight</h1>
-
-<p align="center">
-  A 2D platformer game inspired by classic games like Super Mario,<br>
-  set in a winter and Christmas-themed world.
-</p>
-
-<hr>
-
 <h2>🎮 Game Preview</h2>
 
 <img src="images/15720.gif" width="600"><br><br>
