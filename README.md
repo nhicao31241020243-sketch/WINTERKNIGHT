@@ -8,6 +8,7 @@ Due to limited time and our current level of understanding in the field of game 
 We would also like to extend our heartfelt thanks to all members of our group for their enthusiasm, cooperation, and mutual support throughout the process of completing this project. Each member’s contribution played an important role in overcoming challenges and achieving our shared goals. WE DID IT, TOGETHER!
 
 *Merry Christmas!*
+
 *Cao Ha Nhi*
 
 ## CONTRIBUTOR
