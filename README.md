@@ -71,28 +71,20 @@ The ultimate goal of the game is to defeat the final boss and complete the game.
 
 <h2>🎮 Game Preview</h2>
 
-<!-- Row 1: 15720 on the left, knights stacked on the right -->
-<div style="display:flex; gap:16px; align-items:flex-start;">
-  <img src="images/15720.gif" width="520" alt="Gameplay GIF">
+<img src="images/15720.gif" width="600"><br><br>
 
-  <div style="display:flex; flex-direction:column; gap:16px;">
-    <img src="images/knight1.gif" width="220" alt="Knight 1">
-    <img src="images/knight2.gif" width="220" alt="Knight 2">
-  </div>
+<div align="center">
+  <img src="images/knight1.gif" width="280">
+  <img src="images/knight2.gif" width="280">
 </div>
 
 <br>
 
-<!-- Row 2: backgroundstart + boss side by side -->
-<div style="display:flex; gap:16px;">
-  <img src="images/backgroundstart.png" width="360" alt="Start Background">
-  <img src="images/boss1.png" width="360" alt="Boss Scene">
-</div>
+<img src="images/backgroundstart.png" width="600"><br><br>
 
-<br>
+<img src="images/boss1.png" width="600"><br><br>
 
-<!-- Row 3: christmas -->
-<img src="images/christmas.png" width="600" alt="Christmas Item">
+<img src="images/christmas.png" width="600"><br><br>
 
 <hr>
 
