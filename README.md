@@ -11,17 +11,11 @@
 
 ______
 
-## Lời cảm ơn
+The idea of our game is inspired by the famous 2D platformer game Super Mario, in which players control a character to overcome obstacles, collect items, and defeat enemies throughout different levels.
 
-Chúng em xin gửi lời cảm ơn chân thành đến *Giảng viên hướng dẫn - TS. ĐẶNG NGỌC HOÀNG THÀNH* đã tận tình giảng dạy, hướng dẫn và đồng hành cùng chúng em trong suốt học kỳ vừa qua. Sự chỉ dẫn rõ ràng, kiên nhẫn và tinh thần luôn sẵn sàng hỗ trợ của thầy đã giúp chúng em hiểu rõ hơn những kiến thức nền tảng cũng như cách áp dụng giải thuật vào thực tế. 
+The game is titled “Winter Knight” and is set in a winter-themed environment, which is suitable for the time when this project is carried out, as winter and Christmas are approaching. In the game, the player takes on the role of a UEH student who embarks on an adventure in a winter landscape, exploring various levels to search for treasures in order to pay off academic credit debts, while overcoming different challenges along the way.
 
-Mặc dù môn học và đề tài dự án có nhiều thử thách, nhưng đây cũng là cơ hội quý giá để chúng em rèn luyện tư duy thuật toán, kỹ năng làm việc nhóm và khả năng giải quyết vấn đề. Với sự nỗ lực của cả nhóm cùng sự hướng dẫn và hỗ trợ từ thầy, chúng em đã hoàn thành dự án một cách trọn vẹn.
-
-Cuối cùng, em xin cảm ơn các thành viên trong nhóm đã luôn hợp tác, hỗ trợ và cùng nhau vượt qua những khó khăn để hoàn thành dự án này. 
-  
-  *Trân trọng,* 
-  
-  *Cao Hà Nhi*
+The ultimate goal of the game is to defeat the final boss and complete the game. During gameplay, Christmas-themed items are randomly placed along the path to enhance the player’s abilities and increase the overall enjoyment and engagement of the game.
 
 ______
 ## GIỚI THIỆU ỨNG DỤNG
