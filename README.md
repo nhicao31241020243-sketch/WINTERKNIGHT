@@ -5,7 +5,9 @@ First and foremost, our group would like to express our sincere gratitude to our
 
 Due to limited time and our current level of understanding in the field of game programming, the project inevitably contains certain shortcomings. We sincerely look forward to receiving your valuable feedback and evaluations so that the game can be further improved in the future.
 
-We would also like to extend our heartfelt thanks to all members of our group for their enthusiasm, cooperation, and mutual support throughout the process of completing this project. Each member’s contribution played an important role in overcoming challenges and achieving our shared goals. WE DID IT, TOGETHER!
+We would also like to extend our heartfelt thanks to all members of our group for their enthusiasm, cooperation, and mutual support throughout the process of completing this project. Each member’s contribution played an important role in overcoming challenges and achieving our shared goals. 
+
+WE DID IT, TOGETHER!
 
 *Merry Christmas!*
 
