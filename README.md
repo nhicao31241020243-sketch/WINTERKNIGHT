@@ -70,6 +70,8 @@ The ultimate goal of the game is to defeat the final boss and complete the game.
 
 ## GALLERY
 
+<h2>🎮 Game Preview</h2>
+
 <img src="images/15720.gif" width="600"><br><br>
 
 <div align="center">
@@ -88,3 +90,21 @@ The ultimate goal of the game is to defeat the final boss and complete the game.
 
 <hr>
 
+<h2>🕹️ Features</h2>
+<ul>
+  <li>2D platformer gameplay</li>
+  <li>Winter & Christmas-themed environment</li>
+  <li>Animated knight character</li>
+  <li>Enemies including Golem and Boss</li>
+  <li>Power-up items and collectibles</li>
+</ul>
+
+<hr>
+
+<h2>🛠️ Technologies</h2>
+<ul>
+  <li>Java</li>
+  <li>IntelliJ IDEA</li>
+</ul>
+
+<hr>
