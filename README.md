@@ -27,11 +27,11 @@ We wish you a peaceful and joyful Christmas!
 - License(s:https://creativecommons.org/publicdomain/zero/1.0/ 
 - https://opengameart.org/content/public-pixel-font 
 ### *Music:* 
-attack.wav: https://opengameart.org/content/jumping-man-sounds
-game-over.wav: https://www.myinstants.com/en/instant/phai-chiu-50387/
-hit-player.wav: https://opengameart.org/content/jumping-man-sounds 
-Background Music: https://www.youtube.com/watch?v=DhPYy7PhL_0
-Boss Music: https://www.youtube.com/watch?v=7XVBGAPY7W8
+- attack.wav: https://opengameart.org/content/jumping-man-sounds
+- game-over.wav: https://www.myinstants.com/en/instant/phai-chiu-50387/
+- hit-player.wav: https://opengameart.org/content/jumping-man-sounds 
+- Background Music: https://www.youtube.com/watch?v=DhPYy7PhL_0
+- Boss Music: https://www.youtube.com/watch?v=7XVBGAPY7W8
 3. Nhân vật:
 ### *Characters:* 
 - Main Character: https://free-game-assets.itch.io/free-fantasy-knight
