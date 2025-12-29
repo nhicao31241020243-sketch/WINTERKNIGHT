@@ -22,8 +22,8 @@ WE DID IT, TOGETHER!
 <h1 align="center">❄️ Winter Knight</h1>
 
 <p align="center">
-  A 2D platformer game inspired by classic games like Super Mario,<br>
-  set in a winter and Christmas-themed world.
+  A 2D platformer game with a winter and Christmas theme,<br>
+  inspiration from classic games such as Super Mario.
 </p>
 
 <hr>
