@@ -35,7 +35,7 @@ WE DID IT, TOGETHER!
 - `31241024610` Trần Trung Nghĩa ([@nghialailaptrinh2006](https://github.com/nghialailaptrinh2006))
 
 ## SLIDE
-([*LINK CANVA*](https://www.canva.com/design/DAG8TmdUuFc/fYjuVHCeV0EJa98mzXr6FA/edit?utm_content=DAG8TmdUuFc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton))
+([LINK CANVA](https://www.canva.com/design/DAG8TmdUuFc/fYjuVHCeV0EJa98mzXr6FA/edit?utm_content=DAG8TmdUuFc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton))
 
 ## INSPIRED GAME
 The concept of our game is taken from the famous 2D platformer game Super Mario, where the player controls a character to overcome obstacles, collect items, and defeat enemies throughout different levels.
