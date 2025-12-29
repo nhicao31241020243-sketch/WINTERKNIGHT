@@ -34,6 +34,7 @@ WE DID IT, TOGETHER!
 - `31241020795` Huỳnh Gia Tín ([@tinhuynh31241020795-jpg](https://github.com/tinhuynh31241020795-jpg))
 - `31241024009` Đinh Sỹ Hoàng Quân ([@quantaplaptrinh](https://github.com/quantaplaptrinh))
 - `31241024610` Trần Trung Nghĩa ([@nghialailaptrinh2006](https://github.com/nghialailaptrinh2006))
+- LINK SLIDE PROJECT: https://www.canva.com/design/DAG8TmdUuFc/fYjuVHCeV0EJa98mzXr6FA/edit?utm_content=DAG8TmdUuFc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 ## INSPIRED GAME
 The idea of our game is inspired by the famous 2D platformer game Super Mario, in which players control a character to overcome obstacles, collect items, and defeat enemies throughout different levels.
