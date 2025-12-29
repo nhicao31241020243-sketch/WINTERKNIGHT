@@ -36,11 +36,11 @@ WE DID IT, TOGETHER!
 - LINK SLIDE PROJECT: https://www.canva.com/design/DAG8TmdUuFc/fYjuVHCeV0EJa98mzXr6FA/edit?utm_content=DAG8TmdUuFc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 ## INSPIRED GAME
-The idea of our game is inspired by the famous 2D platformer game Super Mario, in which players control a character to overcome obstacles, collect items, and defeat enemies throughout different levels.
+The concept of our game is taken from the famous 2D platformer game Super Mario, where the player controls a character to overcome obstacles, collect items, and defeat enemies throughout different levels.
 
-The game is titled “Winter Knight” and is set in a winter-themed environment, which is suitable for the time when this project is carried out, as Winter and Christmas are approaching. In the game, the player takes on the role of a UEH student who embarks on an adventure in a winter landscape, exploring various levels to search for treasures in order to pay off academic credit debts, while overcoming different challenges along the way.
+This game will be named "Winter Knight," and it will be set in a winter-themed environment, something suitable for the time this project is being carried out, since Winter and Christmas are coming up. The player in the game will be UEH's student on an adventure in a winter landscape: the player explores levels in search of treasures that would pay off academic credit debts while navigating various challenges.
 
-The ultimate goal of the game is to defeat the final boss and complete the game. During gameplay, Christmas-themed items are randomly placed along the path to enhance the player’s abilities and increase the overall enjoyment and engagement of the game.
+The goal of the game is to kill the last boss and complete the game. In the process of playing the game, some Christmas-themed items are randomly put onto the path so as to enhance the capability of the player to increase the overall enjoyment and engagement with the game.
 
 ## REFERENCES
 ### *Fonts*
