@@ -22,7 +22,7 @@ WE DID IT, TOGETHER!
 <h1 align="center">❄️ Winter Knight</h1>
 
 <p align="center">
-  A 2D platformer game with a Christmas theme
+  A Platformer Game with A Christmas theme
 </p>
 
 <hr>
