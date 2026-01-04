@@ -1,34 +1,34 @@
-nhấn F2 để bật/tắt chế độ toàn màn hình
-trò chơi mới
-tải trò chơi
-danh đề
-tùy chọn
-thoát
-bạn có muốn rời khỏi trò chơi không?
-có
-không
-không có dữ liệu
-quay lại
-bạn có muốn bắt đầu trò chơi mới không?
-tiến trình hiện tại của bạn sẽ bị mất
-quay về menu?
-tiếp tục
-menu
-nhấn Enter để tiếp tục
-hòa bình tồn tại dưới sự bảo hộ của đế chế vĩ đại
-nhân loại phát triển thịnh vượng
-nhưng mọi đế chế rồi cũng sẽ sụp đổ
-vào một đêm đẹp trời, Huyết Nguyệt xuất hiện
-mang theo nó những sinh vật của màn đêm
-bất chấp sự hùng mạnh của đế chế
-nó đã sụp đổ chỉ trong vài tuần
-tưởng chừng như đó là dấu chấm hết cho loài người
-nhưng rồi, Trật Tự Dyrvanias xuất hiện
-một nhóm những chiến binh tài năng
-sau một cuộc chiến dài
+Nhấn F2 để bật/tắt chế độ toàn màn hình
+Trò chơi mới
+Tải trò chơi
+Danh đề
+Tùy chọn
+Thoát
+Bạn có muốn rời khỏi trò chơi không?
+Có
+Không
+Không có dữ liệu
+Quay lại
+Bạn có muốn bắt đầu trò chơi mới không?
+Tiến trình hiện tại của bạn sẽ bị mất
+Quay về menu?
+Tiếp tục
+Menu
+Nhấn Enter để tiếp tục
+Hòa bình tồn tại dưới sự bảo hộ của đế chế vĩ đại
+Nhân loại phát triển thịnh vượng
+Nhưng mọi đế chế rồi cũng sẽ sụp đổ
+Vào một đêm đẹp trời, Huyết Nguyệt xuất hiện
+Mang theo nó những sinh vật của màn đêm
+Bất chấp sự hùng mạnh của đế chế
+Nó đã sụp đổ chỉ trong vài tuần
+Tưởng chừng như đó là dấu chấm hết cho loài người
+Nhưng rồi, Trật Tự Dyrvanias xuất hiện
+Một nhóm những chiến binh tài năng
+Sau một cuộc chiến dài
 Huyết Nguyệt đã bị phong ấn
-nhưng đó là chuyện từ lâu
-ngày nay, với nhiều người, nó chỉ là truyền thuyết
-nhưng gần đây...
-mặt trăng đang dần chuyển sang màu đỏ
-và những sự kiện kỳ lạ bắt đầu xuất hiện
+Nhưng đó là chuyện từ lâu
+Ngày nay, với nhiều người, nó chỉ là truyền thuyết
+Nhưng gần đây...
+Mặt trăng đang dần chuyển sang màu đỏ
+Và những sự kiện kỳ lạ bắt đầu xuất hiện

@@ -406,9 +406,21 @@ public abstract class Scene {
         render.setColor(Color.BLACK);
         render.fillRect(0, 0, this.game.getGameWidth(), this.game.getGameHeight());
 
-        for (Background background : this.backgrounds) {
-            background.render(render);
+        for (int i = 0; i < this.backgrounds.size(); i++) {
+            Background bg = this.backgrounds.get(i);
+
+            // Parallax factor: lớp sau chạy nhanh hơn lớp trước
+            float factor = 0.2f + i * 0.2f;
+
+            // Dịch background theo camera
+            int parallaxX = (int) (-Camera.x * factor);
+
+            // SET TRỰC TIẾP VÀO RECT (ĐÚNG VỚI CODE CỦA BẠN)
+            bg.getRect().setX(parallaxX);
+
+            bg.render(render);
         }
+
 
         if (this.boss != null) {
             if (this.canRender(this.boss.getRect())) {
