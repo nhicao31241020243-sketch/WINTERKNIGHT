@@ -1,17 +1,31 @@
 # A SIMPLE 2D METROIDVANIA PLATFORMER GAME: WINTER KNIGHT PROJECT
 
 ## THANK YOU
-First and foremost, our group would like to express our sincere gratitude to our supervisor, Mr. Huynh Viet Tham, M.Sc., for creating favorable conditions for us to study and apply object-oriented programming knowledge through game design. This project has not only helped us gain practical experience but also stimulated our imagination and enhanced our creativity.
+Firstly, on behalf of our team, we would like to extend our sincere thanks to our supervisor - Mr. Huynh Viet Tham, M.Sc., for having created favorable conditions for us in order to study and apply object-oriented programming knowledge in game designing. This project has not only provided us good experience, but it has also triggered our imagination and creativity.
 
-Due to limited time and our current level of understanding in the field of game programming, the project inevitably contains certain shortcomings. We sincerely look forward to receiving your valuable feedback and evaluations so that the game can be further improved in the future.
+Owing to the constraints of time and the present level of knowledge that we have acquired in the related area of game programming, we have some shortcomings within the project. We eagerly await your feedback and assessments so that some further improvements can be brought into the game.
 
-We would also like to extend our heartfelt thanks to all members of our group for their enthusiasm, cooperation, and mutual support throughout the process of completing this project. Each member’s contribution played an important role in overcoming challenges and achieving our shared goals. 
+We would also like to thank members of our group for their support and collaboration throughout this process in carrying out this project. The contributions that each member made played a very critical part in overcoming obstacles that were in the way for us to attain this goal.
 
 WE DID IT, TOGETHER!
 
 *Merry Christmas!*
 
 *December 24, 2025* 
+
+<div align="center">
+  <img src="images/logo.png" alt="Winter Knight Logo" width="400">
+</div>
+
+<br>
+
+<h1 align="center">❄️ Winter Knight</h1>
+
+<p align="center">
+  A Platformer Game with Christmas theme
+</p>
+
+<hr>
 
 ## CONTRIBUTOR
 - `31241020243` Cao Hà Nhi ([@nhicao31241020243-sketch](https://github.com/nhicao31241020243-sketch))
@@ -20,12 +34,15 @@ WE DID IT, TOGETHER!
 - `31241024009` Đinh Sỹ Hoàng Quân ([@quantaplaptrinh](https://github.com/quantaplaptrinh))
 - `31241024610` Trần Trung Nghĩa ([@nghialailaptrinh2006](https://github.com/nghialailaptrinh2006))
 
+## SLIDE
+([LINK CANVA](https://www.canva.com/design/DAG8TmdUuFc/fYjuVHCeV0EJa98mzXr6FA/edit?utm_content=DAG8TmdUuFc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton))
+
 ## INSPIRED GAME
-The idea of our game is inspired by the famous 2D platformer game Super Mario, in which players control a character to overcome obstacles, collect items, and defeat enemies throughout different levels.
+The concept of our game is taken from the famous 2D platformer game Super Mario, where the player controls a character to overcome obstacles, collect items, and defeat enemies throughout different levels.
 
-The game is titled “Winter Knight” and is set in a winter-themed environment, which is suitable for the time when this project is carried out, as Winter and Christmas are approaching. In the game, the player takes on the role of a UEH student who embarks on an adventure in a winter landscape, exploring various levels to search for treasures in order to pay off academic credit debts, while overcoming different challenges along the way.
+This game will be named "Winter Knight," and it will be set in a winter-themed environment, something suitable for the time this project is being carried out, since Winter and Christmas are coming up. The player in the game will be UEH's student on an adventure in a winter landscape: the player explores levels in search of treasures that would pay off academic credit debts while navigating various challenges.
 
-The ultimate goal of the game is to defeat the final boss and complete the game. During gameplay, Christmas-themed items are randomly placed along the path to enhance the player’s abilities and increase the overall enjoyment and engagement of the game.
+The goal of the game is to kill the last boss and complete the game. In the process of playing the game, some Christmas-themed items are randomly put onto the path so as to enhance the capability of the player to increase the overall enjoyment and engagement with the game.
 
 ## REFERENCES
 ### *Fonts*
@@ -54,20 +71,6 @@ The ultimate goal of the game is to defeat the final boss and complete the game.
 - https://www.leshylabs.com/apps/sstool/
 
 ## GALLERY
-<div align="center">
-  <img src="images/logo.png" alt="Winter Knight Logo" width="400">
-</div>
-
-<br>
-
-<h1 align="center">❄️ Winter Knight</h1>
-
-<p align="center">
-  A 2D platformer game inspired by classic games like Super Mario,<br>
-  set in a winter and Christmas-themed world.
-</p>
-
-<hr>
 
 <h2>🎮 Game Preview</h2>
 
@@ -107,9 +110,3 @@ The ultimate goal of the game is to defeat the final boss and complete the game.
 </ul>
 
 <hr>
-
-
-<p align="center">
-  © 2025 Winter Knight. All rights reserved.<br>
-  December 24, 2025
-</p>
